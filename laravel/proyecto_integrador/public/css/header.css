@@ -1,0 +1,74 @@
+.ofertas-deslizando {
+    background-color: black;
+    color: whitesmoke;
+}
+
+.bloque-login {
+    background-color: #444444;
+    flex-wrap: nowrap;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: whitesmoke;
+}
+
+.input-group-text {
+    background-color: black !important;
+    border: none;
+    color: whitesmoke;
+    gap: 10px;
+}
+
+.input-group-text input {
+    border: none;
+    color: whitesmoke;
+    background-color: transparent;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* .input-group-text:focus-within { Podemos darle estilos al seleccionar.
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+} */
+
+a img {
+    width: 50px;
+}
+
+.cuenta {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 5%;
+    padding-right: 3%;
+}
+
+.carrito {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iniciar-sesion button {
+    background-color: transparent;
+    border-radius: 15px;
+    color: whitesmoke;
+    border-color: black;
+}
+
+.iniciar-sesion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: whitesmoke;
+}
