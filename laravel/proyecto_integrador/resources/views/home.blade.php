@@ -13,12 +13,12 @@
 @include('header')
     <img src="fotos/fondo.gif" alt="fondo" id="fondo">
     <div class="container container-slide">
-        <div class="row">
+        <div class="row slider">
             <div class="col-4">
                 <p>Productos destacados</p>
             </div>
-            <div class=" col-8">
-                <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="col-8">
+                <div id="carouselExampleIndicators" class="carousel slide"  data-bs-theme="dark"> 
                     <div class="carousel-indicators">
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -29,7 +29,7 @@
                         <img src="fotos/image.png" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+                        <img src="fotos/image.png" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
                         <img src="fotos/image.png" class="d-block w-100" alt="...">

@@ -17,10 +17,10 @@
         <div class="container-fluid bloque-login">
             <div class="row align-items-center">
                 <div class="col-4 d-flex align-items-center gap-3">
-                    <a href="">
+                    <a href="./">
                         <img src="fotos/logo.png" alt="logo">
                     </a>
-                    <a href="">CATEGORIAS</a>
+                    <a href="./productos">CATEGORIAS</a>
                     <a href="">COLECCION TEMPORADA</a>
                     <a href="">¿QUIENES SOMOS?</a>
                     <a href="">LOCALES</a>
@@ -35,7 +35,7 @@
                     <div class="iniciar-sesion">
                         <i class="bi bi-person-circle"></i>
                         <a href="">
-                            <button>Iniciar sesión</button>
+                            <button class="btn btn-outline-light">Iniciar sesión</button>
                         </a>
                     </div>
                     <div class="carrito">

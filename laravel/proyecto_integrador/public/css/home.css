@@ -5,3 +5,7 @@
 .container-slide {
     width: 100%;
 }
+
+.slider p {
+    font-size: 96px;
+}
