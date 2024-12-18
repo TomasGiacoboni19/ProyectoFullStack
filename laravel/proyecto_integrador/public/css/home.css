@@ -9,3 +9,8 @@
 .slider p {
     font-size: 96px;
 }
+
+.carousel-item {
+    display: flex ;
+    justify-content: center;
+}

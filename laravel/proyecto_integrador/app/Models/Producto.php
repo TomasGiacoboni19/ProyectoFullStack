@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Producto extends Model
 {
-    protected $table = 'productos';
+    protected $table = 'producto';
     protected $primaryKey = 'id_producto'; // Suele escribirse asi la Primary Key
     // Revisar tema Timestamps
 
