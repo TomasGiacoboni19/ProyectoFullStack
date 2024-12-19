@@ -12,12 +12,10 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        // Necesita los productos para poder mostrarlos
 
-        $productos = Producto::all();
-        $paramatros = ['productos' => $productos];
+        $paramatros = ['productos' => Producto::all()];
 
-        return view('productos.categorias', $paramatros); //Le mando todos los productos
+        return view('productos.productos', $paramatros); //Le mando todos los productos
     }
 
     /**
@@ -25,7 +23,8 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        return view("productos.crear_producto"); //Le mando todos los productos
+
     }
 
     /**
@@ -33,16 +32,55 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datos = $request->validate([
+            "nombre_producto" => ["required"],
+            "precio_producto" => ["required"],
+            "stock_producto" => ["required"],
+        ], [
+            "nombre_producto.required" => "Este campo es obligatorio!",
+            "precio_producto.required" => "Este campo es obligatorio!"
+        ]);
+
+        Producto::create($datos);
+
+        return response()->redirectTo("/productos");
     }
+
 
     /**
      * Display the specified resource.
      */
     public function show(string $id)
     {
-        //
+        $producto = Producto::findOrFail($id);
+
+        $paramatros = ['producto' => $producto];
+
+        return view('productos.producto', $paramatros);
+
     }
+
+    public function getproductoSeleccionado(){
+        $paramatros = ['producto' => null];
+
+        return view('productos.productoSeleccionado',$paramatros);
+    }
+
+
+    public function postproductoSeleccionado(Request $request)
+    {
+        $datos = $request->validate([
+            "nombre_producto" => ["required"],
+        ], [
+            "nombre_producto.required" => "Este campo es obligatorio!",
+        ]);
+
+        $producto = Producto::productoSeleccionado($datos["nombre_producto"]);
+
+        return view('productos.productoSeleccionado', ['producto' => $producto]);
+    }
+
+
 
     /**
      * Show the form for editing the specified resource.

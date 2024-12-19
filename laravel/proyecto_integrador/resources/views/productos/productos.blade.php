@@ -11,4 +11,7 @@
 </head>
 @include('header')
 
-@include('footer')
+    <p>PRODUCTOS QUE TENEMOS </p>
+    @foreach($productos as $producto)
+    <a href="productos/{{$producto->id_producto}}"><p>Nombre: {{$producto->nombre_producto}}</p></a>
+    @endforeach

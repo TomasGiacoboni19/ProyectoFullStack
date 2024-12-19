@@ -8,14 +8,22 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Producto extends Model
 {
+
     protected $table = 'producto';
     protected $primaryKey = 'id_producto'; // Suele escribirse asi la Primary Key
-    // Revisar tema Timestamps
+    public $timestamps = false; // Desactivar timestamps
 
-    protected $fillable = []; // Hay q definir q podemos guardar
+    protected $fillable = ["nombre_producto", "precio_producto","stock_producto"]; // Hay q definir q podemos guardar
+
+    public static function productoSeleccionado($nombre)
+    {
+        return Producto::where('nombre_producto', $nombre)->first();
+    }
+
 
     // HAY QUE REVISAR UNA VEZ QUE LE DEMOS NOMBRE EN LA TABLA CUALES VAN A SER LAS FOREIGN KEY LAS PRIMARY KEY
     // PREFERIBLEMENTE RESPETAR EL FORMATO DE LARAVEL -> MÁS FÁCIL
+
 
     public function categoria(): BelongsTo { //Estoy diciendo que pertenece, en este caso a una categoría
         return $this->belongsTo(Categoria::class);

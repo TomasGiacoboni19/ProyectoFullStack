@@ -10,5 +10,8 @@
     <title>Document</title>
 </head>
 @include('header')
-
-@include('footer')
+<body>
+<p>Nombre: {{$producto->nombre_producto}}</p>
+<p>Precio: {{$producto->precio_producto}}</p>
+<p>Stock: {{$producto->stock_producto}}</p>
+</body>

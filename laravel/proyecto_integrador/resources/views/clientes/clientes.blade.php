@@ -11,4 +11,7 @@
 </head>
 @include('header')
 
-@include('footer')
+<p>Clientes Actuales </p>
+@foreach($clientes as $cliente)
+    <a href="clientes/{{$cliente->id_cliente}}"><p>Nombre: {{$cliente->nombre}}</p></a>
+@endforeach
