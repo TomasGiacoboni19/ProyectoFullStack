@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
     <title>Document</title>
 </head>
 <body>
@@ -17,10 +17,10 @@
         <div class="container-fluid bloque-login">
             <div class="row align-items-center">
                 <div class="col-4 d-flex align-items-center gap-3">
-                    <a href="./">
-                        <img src="fotos/logo.png" alt="logo">
+                    <a href="/">
+                        <img src="../fotos/logo.png" alt="logo">
                     </a>
-                    <a href="./productos">CATEGORIAS</a>
+                    <a href="/productos">CATEGORIAS</a>
                     <a href="">COLECCION TEMPORADA</a>
                     <a href="">¿QUIENES SOMOS?</a>
                     <a href="">LOCALES</a>
@@ -32,18 +32,28 @@
                     </span>
                 </div>
                 <div class="col-4 cuenta">
+                    @auth
+                        <div class="iniciar-sesion">
+                            <i class="bi bi-person-circle"></i>
+                            <a href="/logout">
+                                <button class="btn btn-outline-light">Cerrar Sesion</button>
+                            </a>
+                        </div>
+                        <div class="carrito">
+                            <i class="bi bi-cart"></i>
+                            <p style="margin: 0">0</p>
+                        </div>
+                    @else
                     <div class="iniciar-sesion">
                         <i class="bi bi-person-circle"></i>
-                        <a href="">
+                        <a href="/login">
                             <button class="btn btn-outline-light">Iniciar sesión</button>
                         </a>
                     </div>
-                    <div class="carrito">
-                        {{-- De alguna forma obtiene el valor --}}
-                        <i class="bi bi-cart"></i>
-                        <p style="margin: 0">$ 0</p>
-                    </div>
+                    @endauth
+
                 </div>
             </div>
         </div>
     </header>
+

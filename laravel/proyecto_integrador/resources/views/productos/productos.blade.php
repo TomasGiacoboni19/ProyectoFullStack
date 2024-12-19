@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
-    <title>Document</title>
-</head>
 @include('header')
 
-    <p>PRODUCTOS QUE TENEMOS </p>
-    @foreach($productos as $producto)
-    <a href="productos/{{$producto->id_producto}}"><p>Nombre: {{$producto->nombre_producto}}</p></a>
-    @endforeach
+<p style="color: black;">PRODUCTOS QUE TENEMOS</p>
+@foreach($productos as $producto)
+    <a href="productos/{{$producto->id_producto}}" style="color: black;">
+        <p style="color: black;">Nombre: {{$producto->nombre_producto}}</p>
+    </a>
+@endforeach
+
+@include('footer')

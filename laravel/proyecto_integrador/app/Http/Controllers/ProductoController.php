@@ -85,17 +85,30 @@ class ProductoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Producto $producto)
     {
-        //
+        return view("productos.editar_producto", ["producto" => $producto]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Producto $producto)
     {
-        //
+        $datos = $request->validate([
+            "nombre_producto" => ["required"],
+            "precio_producto" => ["required"]
+        ], [
+            "nombre_producto.required" => "Este campo es obligatorio!",
+            "precio_producto.required" => "Este campo es obligatorio!"
+        ]);
+
+        $producto->nombre_producto = $datos["nombre_producto"];
+        $producto->precio_producto = $datos["precio_producto"];
+
+        $producto->save();
+
+        return redirect("/productos")->with("success", "Se actualizo el producto de forma correcta");
     }
 
     /**
