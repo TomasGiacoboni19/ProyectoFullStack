@@ -83,7 +83,9 @@ class ProductoController extends Controller
     {
         $datos = $request->validate([
             "nombre_producto" => ["required"],
-            "precio_producto" => ["required"]
+            "precio_producto" => ["required"],
+            "stock" => ["required"]
+
         ], [
             "nombre_producto.required" => "Este campo es obligatorio!",
             "precio_producto.required" => "Este campo es obligatorio!"
@@ -91,10 +93,11 @@ class ProductoController extends Controller
 
         $producto->nombre_producto = $datos["nombre_producto"];
         $producto->precio_producto = $datos["precio_producto"];
+        $producto->stock_producto += $datos["stock"];
 
         $producto->save();
 
-        return redirect("/productos")->with("success", "Se actualizo el producto de forma correcta");
+        return redirect("/productos/".$producto->id_producto)->with("success", "Se actualizo el producto de forma correcta");
     }
 
 

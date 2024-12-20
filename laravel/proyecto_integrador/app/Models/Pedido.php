@@ -23,10 +23,10 @@ class Pedido extends Model
         return $this->belongsTo(Cliente::class);
     }
 
-    public function productos(): HasMany {
-    return $this->hasMany(ProductoItem::class);
+    public function item()
+    {
+        return $this->hasMany(ProductoItem::class, 'pedido_id');
     }
-
 
     public static function obtenerPedido(int $clienteId): Pedido
     {

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cliente;
 use App\Models\Pedido;
 use App\Models\Producto;
 use App\Models\ProductoItem;
@@ -37,10 +38,19 @@ class CarritoController extends Controller
 
         $producto->modificarStock($paramatros['cantidad']);
 
-        return redirect('/productos')->with('success', 'Producto agregado al pedido!');
+        return redirect('/pedidos/' . $clienteId . '/' . $pedido->id_pedido)->with('success', 'Producto agregado al pedido!');
     }
 
+    public function show(Cliente $cliente, Pedido $pedido)
+    {
 
+        $parametros = [
+            'pedido' => $pedido,
+            'cliente' => $cliente,
+        ];
+
+        return view('productos.carrito_compras', $parametros);
+    }
 
 
 }

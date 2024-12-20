@@ -19,6 +19,7 @@
                 value="{{ old('nombre_producto', $producto->nombre_producto) }}"
                 autocomplete="off"
                 required>
+            <p>Nombre actual: {{$producto->nombre_producto}}</p>
 
             <!-- Precio -->
             <label for="precio_producto">Precio:</label>
@@ -30,6 +31,7 @@
                 step="0.01"
                 min="0"
                 required>
+            <p>Precio actual: {{$producto->precio_producto}}</p>
 
             <!-- Stock -->
             <label for="editar-stock">Stock:</label>
@@ -37,9 +39,10 @@
                 type="number"
                 id="editar-stock"
                 name="stock"
-                value="{{ old('stock', $producto->stock ?? 20) }}"
+                value="{{ old('stock', 1 ) }}"
                 min="0"
                 required>
+            <p>Stock actual: {{$producto->stock_producto}}</p>
 
             <!-- Botón Actualizar -->
             <button type="submit" class="btn btn-primary">Actualizar</button>
