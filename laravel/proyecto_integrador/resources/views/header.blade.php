@@ -20,7 +20,7 @@
                     <a href="/">
                         <img src="fotos/logo.png" alt="logo">
                     </a>
-                    <a href="/productos">CATEGORIAS</a>
+                    <a href="productos">CATEGORIAS</a>
                     <a href="">COLECCION TEMPORADA</a>
                     <a href="">¿QUIENES SOMOS?</a>
                     <a href="">LOCALES</a>
@@ -46,7 +46,7 @@
                     @else
                     <div class="iniciar-sesion">
                         <i class="bi bi-person-circle"></i>
-                        <a href="/login">
+                        <a href="login">
                             <button class="btn btn-outline-light">Iniciar sesión</button>
                         </a>
                     </div>
