@@ -33,7 +33,7 @@ class CarritoController extends Controller
             'total' => $datos['cantidad'] * $producto->precio
         ];
 
-        $pedido->agregarOActualizarItem($paramatros);
+        $pedido->actualizarPedido($paramatros);
 
         $producto->modificarStock($paramatros['cantidad']);
 

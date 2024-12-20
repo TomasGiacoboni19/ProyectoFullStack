@@ -66,7 +66,7 @@ class Pedido extends Model
         $this->save();
     }
 
-    public function agregarOActualizarItem(array $parametros)
+    public function actualizarPedido(array $parametros)
     {
         $productoItem = ProductoItem::where([
             ['producto_id', '=', $parametros['producto_id']],
