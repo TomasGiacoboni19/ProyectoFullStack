@@ -12,7 +12,7 @@
         <div class="card-body">
             <h3 class="card-title text-center mb-4">Iniciar Sesión</h3>
             <!-- Formulario de login -->
-            <form action="/login" method="POST">
+            <form action="login" method="POST">
                 @csrf
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo Electrónico</label>

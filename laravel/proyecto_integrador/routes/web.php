@@ -16,7 +16,7 @@ Route::get('/productos/seleccionado', [ProductoController::class, 'getproductoSe
 Route::post('/productos/seleccionado', [ProductoController::class, 'postproductoSeleccionado']);
 Route::get('/productos/crear', [ProductoController::class, 'create'])->middleware('auth');
 Route::post('/productos/crear', [ProductoController::class, 'store']);
-Route::get('/productos', [ProductoController::class, 'index'])->middleware('auth');
+Route::get('/productos', [ProductoController::class, 'index']);
 Route::get('/productos/{producto}', [ProductoController::class, 'show'])->middleware('auth');
 
 Route::get('/login', [ClienteController::class, 'login'])->name('login');
