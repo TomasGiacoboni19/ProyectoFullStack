@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cliente;
 use App\Models\Pedido;
 use App\Models\Producto;
-use App\Models\ProductoItem;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 
 class CarritoController extends Controller
@@ -50,6 +48,13 @@ class CarritoController extends Controller
         ];
 
         return view('productos.carrito_compras', $parametros);
+    }
+
+    public function index(Cliente $cliente)
+    {
+        $pedidos = Pedido::where('cliente_id', $cliente->id_cliente)->get();
+
+        return view('clientes.cliente_compras', ['pedidos' => $pedidos]);
     }
 
 
