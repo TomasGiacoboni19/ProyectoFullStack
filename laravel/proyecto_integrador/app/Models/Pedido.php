@@ -30,7 +30,9 @@ class Pedido extends Model
 
     public static function obtenerPedido(int $clienteId): Pedido
     {
-        $pedido = Pedido::where('cliente_id', $clienteId)->first();
+        $pedido = Pedido::where[('cliente_id', $clienteId)
+
+        ]->first();
 
         if (!$pedido) {
             $pedido = self::create([
@@ -56,6 +58,29 @@ class Pedido extends Model
         ]);
 
         $pedido->save();
+    }
+
+    public function aumentarPrecio(Float $precio){
+        $this->precio_total += $precio;
+        $this->save();
+    }
+
+    public function agregarOActualizarItem(array $parametros)
+    {
+        $productoItem = ProductoItem::where([
+            ['producto_id', '=', $parametros['producto_id']],
+            ['pedido_id', '=', $parametros['pedido_id']],
+        ])->first();
+
+        if ($productoItem != null) {
+            $productoItem->cantidad += $parametros['cantidad'];
+            $productoItem->total = $parametros['producto']->precio_producto * $productoItem->cantidad;
+            $productoItem->save();
+        } else {
+            ProductoItem::create($parametros);
+        }
+
+        $this->aumentarPrecio($parametros['cantidad'] * $parametros['producto']->precio_producto);
     }
 
 

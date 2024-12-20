@@ -18,35 +18,24 @@ class CarritoController extends Controller
 
         $datos = $request->validate([
             "producto_id" => ['required'],
+            "cantidad" => ['required'],
+
         ]);
 
         $producto = Producto::find($datos["producto_id"]);
-
         $pedido = Pedido::obtenerPedido($clienteId);
 
         $paramatros = [
+            'producto' => $producto,
             'producto_id' => $producto->id_producto,
             'pedido_id' => $pedido->id_pedido,
-            'cantidad' => 1,
-            'total' => $producto->precio_producto * 1 // Cálculo del total
+            'cantidad' => $datos['cantidad'],
+            'total' => $datos['cantidad'] * $producto->precio
         ];
 
-        $productoItem = ProductoItem::where([
-            ['producto_id', '=', $paramatros['producto_id']],
-            ['pedido_id', '=', $paramatros['pedido_id']],
-        ])->first();
+        $pedido->agregarOActualizarItem($paramatros);
 
-
-        if ($productoItem != null) {
-            $productoItem->cantidad += 1;
-            $productoItem->total = $producto->precio_producto * $productoItem->cantidad;
-            $productoItem->save();
-        } else {
-            ProductoItem::create($paramatros);
-        }
-
-        $pedido->precio_total += $producto->precio_producto;
-        $pedido->save();
+        $producto->modificarStock($paramatros['cantidad']);
 
         return redirect('/productos')->with('success', 'Producto agregado al pedido!');
     }

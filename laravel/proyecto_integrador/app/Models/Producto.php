@@ -21,22 +21,31 @@ class Producto extends Model
     }
 
 
-    // HAY QUE REVISAR UNA VEZ QUE LE DEMOS NOMBRE EN LA TABLA CUALES VAN A SER LAS FOREIGN KEY LAS PRIMARY KEY
-    // PREFERIBLEMENTE RESPETAR EL FORMATO DE LARAVEL -> MÁS FÁCIL
 
-
-    public function categoria(): BelongsTo { //Estoy diciendo que pertenece, en este caso a una categoría
+    public function categoria(): BelongsTo {
         return $this->belongsTo(Categoria::class);
     }
 
-    public function cliente(): BelongsTo { //En este caso a un cliente
+    public function cliente(): BelongsTo {
         return $this->belongsTo(Cliente::class);
     }
 
-    public function fotos(): HasMany { //Estoy diciendo que tiene muchas imágenes
+    public function fotos(): HasMany {
         return $this->hasMany(Imagen::class);
-        // Eloquent asume que la Foreign Key de Producto en la tabla Imagenes es producto_id
     }
 
-    // NO SE COMO SERIA LA DE PEDIDO X PRODUCTO
+
+    public function modificarStock(int $cantidad){
+        if ($this->stock_producto >= $cantidad) {
+            $this->stock_producto -= $cantidad;
+            $this->save();
+        } else {
+            throw new Exception('No hay suficiente stock disponible.');
+        }
+    }
+
+
+
+
+
 }
