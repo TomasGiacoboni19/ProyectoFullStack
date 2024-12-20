@@ -27,4 +27,4 @@ Route::get('/clientes', [ClienteController::class, 'index']); // No tiene sentid
 Route::get('/clientes/{cliente}', [ClienteController::class, 'show']);
 
 
-Route::post('/carrito/agregar', [CarritoController::class, 'agregarProducto'])->middleware('auth');
+Route::post('/carrito/agregar', [CarritoController::class, 'agregarProducto'])->name('carrito.agregar');

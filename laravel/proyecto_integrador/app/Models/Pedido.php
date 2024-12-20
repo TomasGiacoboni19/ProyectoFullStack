@@ -3,15 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Model;
 
-class Pedido
+class Pedido extends Model
 {
     protected $table = 'pedido';
     protected $primaryKey = 'id_pedido';
     public $timestamps = false;
 
     protected $fillable = [
-        'cliente_id', 'fecha_generado'
+        'cliente_id', 'fecha_generado','precio_total'
     ];
 
     const ESTADO_ABIERTO = 0;
@@ -27,16 +28,16 @@ class Pedido
     }
 
 
-    public function obtenerPedido(int $clienteId): Pedido
+    public static function obtenerPedido(int $clienteId): Pedido
     {
-        $pedido = self::where('cliente_id', $clienteId)
-            ->where('estado', self::ESTADO_ABIERTO)
-            ->first();
+        $pedido = Pedido::where('cliente_id', $clienteId)->first();
 
         if (!$pedido) {
             $pedido = self::create([
                 'cliente_id' => $clienteId,
-                'fecha_generado' => now(),
+                'fecha_generado' => now()->toDateString(),
+                'precio_total' => 0,
+
             ]);
         }
 

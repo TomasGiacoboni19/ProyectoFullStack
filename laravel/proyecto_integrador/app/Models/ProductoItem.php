@@ -2,38 +2,27 @@
 
 namespace App\Models;
 
-class ProductoItem
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
+class ProductoItem extends Model
 {
-
     protected $table = 'producto_x_pedido';
-    protected $primaryKey = null;
     public $timestamps = false;
+    protected $primaryKey='id_producto_x_pedido';
 
-    protected $fillable = ["pedido_id", "producto_id", "cantidad"];
+    protected $fillable = ['pedido_id', 'producto_id', 'cantidad','total'];
 
-
-    public function pedido(): BelongsTo {
-        return $this->belongsTo(Pedido::class);
-    }
-
-    public function producto(): BelongsTo {
-        return $this->belongsTo(Producto::class);
-    }
-
-    public function getKeyName()
+    // Relaciones
+    public function pedido(): BelongsTo
     {
-        return ['id_producto', 'id_pedido'];
+        return $this->belongsTo(Pedido::class, 'pedido_id', 'id_pedido');
     }
 
-    protected function getKeyForSaveQuery()
+    public function producto(): BelongsTo
     {
-        $keys = $this->getKeyName();
-        $query = [];
-
-        foreach ($keys as $key) {
-            $query[$key] = $this->getAttribute($key);
-        }
-
-        return $query;
+        return $this->belongsTo(Producto::class, 'producto_id', 'id_producto');
     }
+
+
 }

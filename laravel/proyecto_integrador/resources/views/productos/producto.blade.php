@@ -8,7 +8,7 @@
 
 <form action="/carrito/agregar" method="POST">
     @csrf
-    <input type="hidden" name="producto_id" value="{{ $producto->id }}">
+    <input type="hidden" name="producto_id" value="{{ $producto->id_producto }}">
     <button type="submit">Agregar al carrito</button>
 </form>
 
