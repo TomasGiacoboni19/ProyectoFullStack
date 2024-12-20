@@ -30,16 +30,17 @@ class Pedido extends Model
 
     public static function obtenerPedido(int $clienteId): Pedido
     {
-        $pedido = Pedido::where[('cliente_id', $clienteId)
-
-        ]->first();
+        $pedido = Pedido::where([
+            ['cliente_id', '=', $clienteId],
+            ['carritoDisponible', '=', 1],
+        ])->first();
 
         if (!$pedido) {
             $pedido = self::create([
                 'cliente_id' => $clienteId,
                 'fecha_generado' => now()->toDateString(),
                 'precio_total' => 0,
-
+                'carritoDisponible' => 1,
             ]);
         }
 
