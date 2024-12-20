@@ -1,23 +1,54 @@
 @include('header')
 
+<link rel="stylesheet" type="text/css" href="{{ asset('css/editar_producto.css') }}">
 
-<div class="container py-md-5 container--narrow">
-    <a href="/productos/{{$producto->id_producto}}" style="color: black;">Volver atras</a>
-    <form action="/productos/{{ $producto->id_producto }}/editar" method="post">
-        @csrf
-        @method("PUT")
-        <div class="form-group">
-            <label for="nombre_producto" class="text-muted mb-1"><small>Nombre:</small></label>
-            <input value="{{ old('nombre_producto', $producto->nombre_producto) }}" type="text" class="form-control form-control-lg" id="nombre_producto" name="nombre_producto" autocomplete="off">
-        </div>
+<body>
+<section id="editar-producto">
+    <h2 class="section-title">Editar Producto</h2>
+    <div class="producto-form">
+        <form action="/productos/{{ $producto->id_producto }}/editar" method="POST">
+            @csrf
+            @method("PUT")
 
-        <div class="form-group">
-            <label for="precio_producto" class="text-muted mb-1"><small>Precio: </small></label>
-            <input value="{{ old('precio_producto', $producto->precio_producto) }}" type="text" class="form-control form-control-lg" id="precio_producto" name="precio_producto" autocomplete="off">
-        </div>
+            <!-- Nombre del Producto -->
+            <label for="nombre_producto">Nombre del Producto:</label>
+            <input
+                type="text"
+                id="nombre_producto"
+                name="nombre_producto"
+                value="{{ old('nombre_producto', $producto->nombre_producto) }}"
+                autocomplete="off"
+                required>
+            <p>Nombre actual: {{$producto->nombre_producto}}</p>
 
-        <button class="btn btn-primary">Actualizar</button>
-    </form>
-</div>
+            <!-- Precio -->
+            <label for="precio_producto">Precio:</label>
+            <input
+                type="number"
+                id="precio_producto"
+                name="precio_producto"
+                value="{{ old('precio_producto', $producto->precio_producto) }}"
+                step="0.01"
+                min="0"
+                required>
+            <p>Precio actual: {{$producto->precio_producto}}</p>
 
-@include('footer')
+            <!-- Stock -->
+            <label for="editar-stock">Stock:</label>
+            <input
+                type="number"
+                id="editar-stock"
+                name="stock"
+                value="{{ old('stock', 1 ) }}"
+                min="0"
+                required>
+            <p>Stock actual: {{$producto->stock_producto}}</p>
+
+            <!-- Botón Actualizar -->
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </form>
+    </div>
+</section>
+</body>
+<!-- Botón Volver -->
+<a href="/productos/{{ $producto->id_producto }}" class="btn btn-secondary">Volver atrás</a>

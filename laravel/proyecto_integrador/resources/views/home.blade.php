@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="css/home.css">
     <title>Document</title>
 </head>
+<body>
 @include('header')
     <img src="fotos/fondo.gif" alt="fondo" id="fondo">
     <div class="container container-slide">
@@ -18,7 +19,7 @@
                 <p>Productos destacados</p>
             </div>
             <div class="col-8">
-              <div id="carouselExampleIndicators" class="carousel slide"  data-bs-theme="dark"> 
+              <div id="carouselExampleIndicators" class="carousel slide"  data-bs-theme="dark">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -48,3 +49,4 @@
     </div>
   </div>
 @include('footer')
+</body>

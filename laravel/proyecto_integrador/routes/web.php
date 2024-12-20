@@ -26,5 +26,8 @@ Route::get('/logout', [ClienteController::class, 'logout']);
 Route::get('/clientes', [ClienteController::class, 'index']); // No tiene sentido de existencia
 Route::get('/clientes/{cliente}', [ClienteController::class, 'show']);
 
+Route::get('/pedidos/{cliente}', [CarritoController::class, 'index']);
+Route::get('/pedidos/{cliente}/{pedido}', [CarritoController::class, 'show']);
+
 
 Route::post('/carrito/agregar', [CarritoController::class, 'agregarProducto'])->name('carrito.agregar');

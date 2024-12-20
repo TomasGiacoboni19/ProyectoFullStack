@@ -27,9 +27,7 @@ class ClienteController extends Controller
 
     public function show(Cliente $cliente)
     {
-
         return view('clientes.cliente', ['cliente' => $cliente]);
-
     }
 
     public function login()

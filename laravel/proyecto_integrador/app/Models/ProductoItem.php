@@ -21,7 +21,7 @@ class ProductoItem extends Model
 
     public function producto(): BelongsTo
     {
-        return $this->belongsTo(Producto::class, 'producto_id', 'id_producto');
+        return $this->belongsTo(Producto::class, 'producto_id');
     }
 
 

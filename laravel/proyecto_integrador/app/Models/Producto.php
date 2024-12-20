@@ -21,7 +21,6 @@ class Producto extends Model
     }
 
 
-
     public function categoria(): BelongsTo {
         return $this->belongsTo(Categoria::class);
     }
@@ -34,6 +33,10 @@ class Producto extends Model
         return $this->hasMany(Imagen::class);
     }
 
+    public function productoItem()
+    {
+        return $this->hasMany(ProductoItem::class, 'id_producto');
+    }
 
     public function modificarStock(int $cantidad){
         if ($this->stock_producto >= $cantidad) {
