@@ -1,5 +1,5 @@
         <footer>
-            <div class="container justify-content-center">
+            <div class="justify-content-center container-fluid">
                 <div class="row gap-4 justify-content-center">
                     <div class="col-auto">
                         <h3>Ayuda</h3>

@@ -18,7 +18,7 @@
             <div class="row align-items-center">
                 <div class="col-4 d-flex align-items-center gap-3">
                     <a href="/">
-                        <img src="../fotos/logo.png" alt="logo">
+                        <img src="fotos/logo.png" alt="logo">
                     </a>
                     <a href="/productos">CATEGORIAS</a>
                     <a href="">COLECCION TEMPORADA</a>

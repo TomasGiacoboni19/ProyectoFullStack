@@ -77,8 +77,6 @@ a:visited {
 footer {
     background-color: #444444;
     bottom: 0;
-    position: fixed;
-    width: 100%;
 }
 
 footer p {
