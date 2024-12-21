@@ -19,6 +19,8 @@ Route::post('/productos/crear', [ProductoController::class, 'store']);
 Route::get('/productos', [ProductoController::class, 'index']);
 Route::get('/productos/{producto}', [ProductoController::class, 'show'])->middleware('auth');
 
+Route::get('/categorias',[ProductoController::class,'categorias']);
+
 Route::get('/login', [ClienteController::class, 'login'])->name('login');
 Route::post('/login', [ClienteController::class, 'authenticate']);
 Route::get('/logout', [ClienteController::class, 'logout']);
