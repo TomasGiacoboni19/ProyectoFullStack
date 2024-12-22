@@ -47,6 +47,23 @@ class ProductoController extends Controller
         Producto::create($datos);
 
         return response()->redirectTo("/productos");
+
+        // $datos = $request->validate([
+        //     'nombre_producto' => 'required|string|max:255',
+        //     'precio_producto' => 'required|numeric|min:0',
+        //     'stock_producto' => 'required|integer|min:0',
+        //     'categorias' => 'required',
+        //     'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // valida que sea una imagen
+        // ]);
+
+
+        // $rutaImagen = $request->file('foto')->store('productos', 'public');
+        // $datos['foto'] = $rutaImagen; // Guardamos la ruta en la base de datos
+
+        // // Guardar producto en la base de datos
+        // Producto::create($datos);
+
+        // return redirect()->back()->with('success', 'Producto creado correctamente.');
     }
 
 
