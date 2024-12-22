@@ -34,7 +34,9 @@
                 <div class="col-4 cuenta">
                     @auth
                         <div class="iniciar-sesion">
-                            <i class="bi bi-person-circle"></i>
+                            <a href="/clientes/{{ auth()->user()->id_cliente }}">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
                             <a href="/logout">
                                 <button class="btn btn-outline-light">Cerrar Sesion</button>
                             </a>
@@ -45,7 +47,6 @@
                         </div>
                     @else
                     <div class="iniciar-sesion">
-                        <i class="bi bi-person-circle"></i>
                         <a href="/login">
                             <button class="btn btn-outline-light">Iniciar sesión</button>
                         </a>

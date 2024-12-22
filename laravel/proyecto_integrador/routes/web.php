@@ -3,7 +3,7 @@
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ClienteController;
-
+use App\Http\Controllers\ProductosxCliente;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,6 +20,7 @@ Route::get('/productos', [ProductoController::class, 'index']);
 Route::get('/productos/{producto}', [ProductoController::class, 'show'])->middleware('auth');
 
 Route::get('/categorias',[ProductoController::class,'categorias']);
+Route::get('/cliente/{cliente}/misProductos', [ProductosxCliente::class, 'show']);
 
 Route::get('/login', [ClienteController::class, 'login'])->name('login');
 Route::post('/login', [ClienteController::class, 'authenticate']);
