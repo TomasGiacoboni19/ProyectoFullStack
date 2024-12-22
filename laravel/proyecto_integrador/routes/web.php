@@ -18,6 +18,7 @@ Route::get('/productos/crear', [ProductoController::class, 'create'])->middlewar
 Route::post('/productos/crear', [ProductoController::class, 'store']);
 Route::get('/productos', [ProductoController::class, 'index']);
 Route::get('/productos/{producto}', [ProductoController::class, 'show'])->middleware('auth');
+Route::delete('/productos/{producto}', [ProductoController::class, 'destroy']);
 
 Route::get('/categorias',[ProductoController::class,'categorias']);
 Route::get('/cliente/{cliente}/misProductos', [ProductosxCliente::class, 'show']);

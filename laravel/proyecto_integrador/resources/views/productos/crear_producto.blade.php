@@ -24,6 +24,7 @@
     <label for="stock">Stock:</label>
     <input type="number" name="stock_producto" id="stock" value="{{ old('stock') }}" required>
     <br>
+    <label for="categorias">Categoría:</label>
     <button type="submit">Guardar</button>
 </form>
 </body>

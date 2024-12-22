@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categoria;
 use App\Models\Producto;
+use Exception;
 use Illuminate\Http\Request;
 
 class ProductoController extends Controller
@@ -26,7 +27,8 @@ class ProductoController extends Controller
 
     public function create()
     {
-        return view("productos.crear_producto"); //Le mando todos los productos
+        $parametros = ['categorias' => Categoria::all()];
+        return view("productos.crear_producto", $parametros); //Le mando todos los productos
 
     }
 
@@ -108,9 +110,14 @@ class ProductoController extends Controller
     }
 
 
-    public function destroy(string $id)
+    public function destroy(Producto $producto)
     {
-        //
+        try {
+            $producto->delete();
+            return redirect()->back()->with('success', 'Se elimino correctamente.');
+        } catch (Exception $e) {
+            return redirect()->back()->with('failed', $e->getMessage());
+        }
     }
 
 
