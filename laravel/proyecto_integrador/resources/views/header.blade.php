@@ -22,8 +22,8 @@
                     </a>
                     <a href="/categorias">CATEGORIAS</a>
                     <a href="/productos">PRODUCTOS</a>
-                    <a href="">¿QUIENES SOMOS?</a>
-                    <a href="">LOCALES</a>
+                    <a href="/nosotros">¿QUIENES SOMOS?</a>
+                    <a href="/locales">LOCALES</a>
                 </div>
                 <div class="col-4">
                     <span class="input-group-text bg-white icono">

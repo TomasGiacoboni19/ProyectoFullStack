@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriasController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagoController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\ProductoController;
@@ -49,4 +50,5 @@ Route::put('/pedidos/{pedido}/entregado', [PedidoController::class, 'entregado']
 Route::get('/pagos/{pedido}/seleccionar', [PagoController::class, 'seleccionarMetodo']);
 Route::post('/pagos/{pedido}', [PagoController::class, 'generarPago']);
 
-
+Route::get('/nosotros',[HomeController::class,'nosotros']);
+Route::get('/locales',[HomeController::class,'locales']);
