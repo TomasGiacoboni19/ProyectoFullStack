@@ -12,21 +12,28 @@ class Pedido extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'cliente_id', 'fecha_generado','precio_total'
+        'cliente_id', 'fecha_pedido','precio_total','carritoDisponible','medio_pago_id','entregado'
     ];
 
-    const ESTADO_ABIERTO = 0;
-    const ESTADO_CERRADO = 1;
 
-
-    public function cliente(): BelongsTo {
-        return $this->belongsTo(Cliente::class);
+    public function cliente()
+    {
+        return $this->belongsTo(Cliente::class, 'cliente_id');
     }
+
+
 
     public function item()
     {
         return $this->hasMany(ProductoItem::class, 'pedido_id');
     }
+    //                                                                  CLAVE FK PEDIDO,       CLAVE PK MEDIO_PAGO
+    public function medioDePago()
+    {
+        return $this->belongsTo(medioDePago::class, 'medio_pago_id', 'id_medio_pago');
+    }
+
+
 
     public static function obtenerPedido(int $clienteId): Pedido
     {
@@ -38,7 +45,7 @@ class Pedido extends Model
         if (!$pedido) {
             $pedido = self::create([
                 'cliente_id' => $clienteId,
-                'fecha_generado' => now()->toDateString(),
+                'fecha_pedido' => now()->toDateString(),
                 'precio_total' => 0,
                 'carritoDisponible' => 1,
             ]);
@@ -50,21 +57,15 @@ class Pedido extends Model
 
     public function cerrarPedido()
     {
-        $this->update(['estado' => self::ESTADO_CERRADO]);
-
-        $pedido = self::create([
-            'cliente_id' => $this->cliente_id,
-            'fecha_generado' => now(),
-            'estado' => self::ESTADO_ABIERTO,
-        ]);
-
-        $pedido->save();
+        $this->update(['carritoDisponible' => 0]);
     }
 
-    public function aumentarPrecio(Float $precio){
+    public function modificarPrecio(Float $precio){
         $this->precio_total += $precio;
         $this->save();
     }
+
+
 
     public function actualizarPedido(array $parametros)
     {
@@ -75,14 +76,17 @@ class Pedido extends Model
 
         if ($productoItem != null) {
             $productoItem->cantidad += $parametros['cantidad'];
-            $productoItem->total = $parametros['producto']->precio_producto * $productoItem->cantidad;
+            $productoItem->total +=  $parametros['total'];
             $productoItem->save();
         } else {
             ProductoItem::create($parametros);
         }
 
-        $this->aumentarPrecio($parametros['cantidad'] * $parametros['producto']->precio_producto);
+        $this->modificarPrecio($parametros['cantidad'] * $parametros['producto']->precio_producto);
     }
+
+
+
 
 
 }

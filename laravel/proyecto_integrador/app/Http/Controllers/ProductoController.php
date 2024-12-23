@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categoria;
+use App\Models\Pedido;
 use App\Models\Producto;
 use Exception;
 use Illuminate\Http\Request;
@@ -18,11 +19,6 @@ class ProductoController extends Controller
         return view('productos.productos', $paramatros); //Le mando todos los productos
     }
 
-    public function categorias()
-    {
-        $parametros = ['categorias' => Categoria::all()];
-        return view('productos.categorias', $parametros);
-    }
 
 
     public function create()
@@ -35,16 +31,23 @@ class ProductoController extends Controller
 
     public function store(Request $request)
     {
+
+
         $datos = $request->validate([
             "nombre_producto" => ["required"],
             "precio_producto" => ["required"],
             "stock_producto" => ["required"],
+            "categoria_id" => ['required'],
+            "vendedor_id" => ['required'],
         ], [
-            "nombre_producto.required" => "Este campo es obligatorio!",
-            "precio_producto.required" => "Este campo es obligatorio!"
+            "nombre_producto.required" => "Nombre del producto es obligatorio!",
+            "precio_producto.required" => "Precio del producto es obligatorio!",
+            "categoria.required" => "Categoria del producto es obligatorio",
+
         ]);
 
         Producto::create($datos);
+
 
         return response()->redirectTo("/productos");
 
@@ -70,31 +73,12 @@ class ProductoController extends Controller
     public function show(string $id)
     {
         $producto = Producto::findOrFail($id);
+        $pedido = Pedido::obtenerPedido( auth()->id() );
 
-        $paramatros = ['producto' => $producto];
+        $paramatros = ['producto' => $producto, 'pedido' => $pedido];
 
         return view('productos.producto', $paramatros);
 
-    }
-
-    public function getproductoSeleccionado(){
-        $paramatros = ['producto' => null];
-
-        return view('productos.productoSeleccionado',$paramatros);
-    }
-
-
-    public function postproductoSeleccionado(Request $request)
-    {
-        $datos = $request->validate([
-            "nombre_producto" => ["required"],
-        ],
-            ["nombre_producto.required" => "Este campo es obligatorio!",]
-        );
-
-        $producto = Producto::productoSeleccionado($datos["nombre_producto"]);
-
-        return view('productos.productoSeleccionado', ['producto' => $producto]);
     }
 
 

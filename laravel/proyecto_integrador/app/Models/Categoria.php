@@ -9,4 +9,9 @@ class Categoria extends Model
     protected $table = 'categoria';
     protected $primaryKey = 'id_categoria';
     public $timestamps = false;
+
+    public function productos()
+    {
+        return $this->hasMany(Producto::class, 'categoria_id');
+    }
 }

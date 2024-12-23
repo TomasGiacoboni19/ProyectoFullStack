@@ -13,7 +13,6 @@ class ProductoItem extends Model
 
     protected $fillable = ['pedido_id', 'producto_id', 'cantidad','total'];
 
-    // Relaciones
     public function pedido(): BelongsTo
     {
         return $this->belongsTo(Pedido::class, 'pedido_id', 'id_pedido');

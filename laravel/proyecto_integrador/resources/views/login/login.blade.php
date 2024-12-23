@@ -7,6 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
     <div class="card shadow" style="width: 24rem;">
         <div class="card-body">
@@ -15,8 +20,8 @@
             <form action="login" method="POST">
                 @csrf
                 <div class="mb-3">
-                    <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Ingresa tu email" required>
+                    <label for="usuario" class="form-label">Usuario</label>
+                    <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ingresa tu usuario" required>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Contraseña</label>
@@ -32,6 +37,9 @@
                 @endif
                 <button type="submit" class="btn btn-primary w-100">Ingresar</button>
             </form>
+            <br>
+            <a href="/clientes/registro"> No tenes usuario? Registrate! </a>
+
         </div>
     </div>
 </div>

@@ -20,7 +20,7 @@
             <h3>{{$producto->nombre_producto}}</h3>
             <p><strong>Precio: {{$producto->precio_producto}}</strong></p>
             <p><strong>Stock: {{$producto->stock_producto}}</strong> </p>
-            <form action="/carrito/agregar" method="POST" style="display: flex; flex-direction: column; gap: 10px; width: 300px;">
+            <form action="/pedidos/{{$pedido->id_pedido}}/productos" method="POST" style="display: flex; flex-direction: column; gap: 10px; width: 300px;">
                 @csrf
                 <input type="hidden" name="producto_id" value="{{ $producto->id_producto }}">
                 <label for="cantidad" >Cantidad:</label>

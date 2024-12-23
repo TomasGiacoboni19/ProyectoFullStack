@@ -21,7 +21,7 @@
                         <img src="fotos/logo.png" alt="logo">
                     </a>
                     <a href="/categorias">CATEGORIAS</a>
-                    <a href="/productos">COLECCION TEMPORADA</a>
+                    <a href="/productos">PRODUCTOS</a>
                     <a href="">¿QUIENES SOMOS?</a>
                     <a href="">LOCALES</a>
                 </div>

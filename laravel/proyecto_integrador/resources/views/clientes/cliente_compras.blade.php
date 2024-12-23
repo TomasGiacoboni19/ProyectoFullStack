@@ -10,8 +10,10 @@
                 @foreach($pedidos as $pedido)
                     <li>
                         <strong>Fecha del pedido:</strong> {{ $pedido->fecha_pedido }}<br>
-                        <strong>Estado:</strong> @if($pedido->carritoDisponible) ABIERTO @else CERRADO @endif <br>
+                        <strong>Carrito de compra:</strong> @if($pedido->carritoDisponible) ABIERTO @else CERRADO @endif <br>
+                        <strong>Estado del pedido:</strong> @if(!$pedido->entregado) NO ENTREGADO @else ENTREAGO @endif <br>
                         <strong>Total:</strong> ${{ number_format($pedido->precio_total, 2) }}
+                        <a href="/pedidos/{{$pedido->id_pedido}}"><p><strong style="color: #18181b"> Ver el pedido </strong></p></a>
                     </li>
                 @endforeach
             </ul>
