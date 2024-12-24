@@ -13,7 +13,7 @@ class Producto extends Model
     protected $primaryKey = 'id_producto'; // Suele escribirse asi la Primary Key
     public $timestamps = false; // Desactivar timestamps
 
-    protected $fillable = ["nombre_producto", "precio_producto","stock_producto",'categoria_id','vendedor_id']; // Hay q definir q podemos guardar
+    protected $fillable = ["nombre_producto", "precio_producto","stock_producto",'categoria_id','vendedor_id', 'foto_producto']; // Hay q definir q podemos guardar
 
 
     public function categoria(): BelongsTo {
@@ -30,8 +30,6 @@ class Producto extends Model
         return $this->hasMany(ProductoItem::class, 'id_producto');
     }
 
-
-
     public function modificarStock(int $cantidad) {
         if ($this->stock_producto + $cantidad < 0) {
             throw new Exception('No hay suficiente stock disponible.');
@@ -39,10 +37,4 @@ class Producto extends Model
         $this->stock_producto += $cantidad;
         $this->save();
     }
-
-
-
-
-
-
 }
