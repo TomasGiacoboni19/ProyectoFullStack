@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <title>Document</title>
 </head>
+<body>
 @include('header')
     <p>Categorias disponibles</p>
 <section class="py-5">
@@ -34,3 +35,6 @@
 </section>
 
 @include('footer')
+</body>
+
+</html>
