@@ -1,0 +1,51 @@
+/* Footer Estilos Generales */
+footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+footer ul li i {
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #28a745; /* Verde claro para hover */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    footer .row {
+        text-align: center;
+    }
+
+    footer .row .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: #bbbbbb;
+    margin-top: 20px;
+}

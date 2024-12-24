@@ -3,98 +3,39 @@
     color: whitesmoke;
 }
 
-.bloque-login {
-    background-color: #444444;
-    flex-wrap: nowrap;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: whitesmoke;
-}
-
-.input-group-text {
-    background-color: black !important;
-    border: none;
-    color: whitesmoke;
-    gap: 10px;
-}
-
-.input-group-text input {
-    border: none;
-    color: whitesmoke;
-    background-color: transparent;
-    width: 100%;
-}
-
-input:focus {
-    outline: none;
-}
-
-.input-group-text:focus-within { 
-    border: 1px solid whitesmoke;
-    border-radius: 5px;
-}
-
-a img {
+.logo {
     width: 50px;
 }
 
-.cuenta {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 5%;
-    padding-right: 3%;
-}
-
-.carrito {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.iniciar-sesion button {
-    background-color: transparent;
-    border-radius: 15px;
+.navbar-dark .navbar-nav .nav-link {
     color: whitesmoke;
-    border-color: black;
-    border-style: solid;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.iniciar-sesion {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffcc00;
 }
 
-a {
-    text-decoration: none;
-}
-
-a:visited {
+.input-group-text {
+    background-color: whitesmoke;
+    border: none;
     color: whitesmoke;
 }
 
-footer {
-    background-color: #444444;
-    bottom: 0;
+.input-group input {
+    border: none;
+    background: none;
+    color: #fff;
+    padding: 5px;
+    width: 100%;
 }
 
-footer p {
-    margin: 0;
-    color: whitesmoke;
-    text-align: center;
+.input-group input:focus {
+    outline: none;
+    border-bottom: 2px solid #ffcc00;
 }
 
-footer ul {
-    list-style: none;
-    padding-inline-start: 0;
-}
-
-footer .container {
-    padding-top: 10px;
-}
-
-
-footer h3 {
-    color: whitesmoke;
+.badge {
+    font-size: 0.75rem;
 }
