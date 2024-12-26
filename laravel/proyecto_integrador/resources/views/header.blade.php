@@ -1,6 +1,6 @@
 <header>
     <div class="ofertas-deslizando text-center py-2">
-        <p class="mb-0">¡Aprovecha nuestras ofertas por tiempo limitado!</p>
+        <p class="mb-0" >¡Aprovecha nuestras ofertas por tiempo limitado!</p>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">

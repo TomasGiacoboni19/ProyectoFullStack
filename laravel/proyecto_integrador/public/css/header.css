@@ -1,8 +1,15 @@
 .ofertas-deslizando {
     background-color: black;
     color: whitesmoke;
+    overflow:hidden;
 }
+.ofertas-deslizando p {
+    display: inline-block;
+    animation: textoMov 5s linear infinite;
+    white-space: nowrap;
+    animation-timing-function: linear;
 
+}
 .logo {
     width: 50px;
 }
@@ -39,3 +46,8 @@
 .badge {
     font-size: 0.75rem;
 }
+@keyframes textoMov {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
