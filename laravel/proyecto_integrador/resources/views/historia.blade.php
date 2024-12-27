@@ -21,12 +21,12 @@
             </p>
         </div>
         <div class="col-6 imgLocal" >
-            <img class="img-fluid ImagenesHistoria" src="fotos/DALL·E%202024-12-27%2016.13.16%20-%20A%20vibrant%20storefront%20of%20a%20trendy%20clothing%20store%20named%20_DolceBanana,_%20featuring%20a%20sleek%20modern%20design%20with%20large%20glass%20windows%20showcasing%20stylish%20manne.webp" alt="">
+            <img class="img-fluid ImagenesHistoria" src="fotos/Local" alt="">
         </div>
     </div>
     <div class="row Taller mt-5">
         <div class="col-6">
-            <img class="img-fluid ImagenesHistoria" src="fotos/DALL·E%202024-12-27%2016.14.59%20-%20A%20vibrant%20storefront%20of%20a%20trendy%20workshop%20named%20_DolceBanana,_%20featuring%20a%20sleek%20modern%20industrial%20design%20with%20large%20open%20garage%20doors%20revealing%20works.webp" alt="">
+            <img class="img-fluid ImagenesHistoria" src="fotos/Taller" alt="">
         </div>
         <div class="col-6 textoTaller">
             <p>

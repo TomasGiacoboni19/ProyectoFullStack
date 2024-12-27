@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af122576-25b3-4e7f-ad8d-13670eb1eadb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/historia.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/fotos/DALL·E 2024-12-27 16.13.16 - A vibrant storefront of a trendy clothing store named _DolceBanana,_ featuring a sleek modern design with large glass windows showcasing stylish manne.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/fotos/DALL·E 2024-12-27 16.14.59 - A vibrant storefront of a trendy workshop named _DolceBanana,_ featuring a sleek modern industrial design with large open garage doors revealing works.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/historia.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +62,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ProyectoFinal\laravel\proyecto_integrador\public\fotos" />
       <recent name="C:\xampp\htdocs\CursoWeb\ProyectoFullStack\laravel\proyecto_integrador\resources\js" />
       <recent name="C:\xampp\htdocs\CursoWeb\ProyectoFullStack\laravel\proyecto_integrador\resources\css" />
     </key>
@@ -109,7 +105,7 @@
       <workItem from="1734975846875" duration="11628000" />
       <workItem from="1735324258632" duration="1228000" />
       <workItem from="1735329146356" duration="213000" />
-      <workItem from="1735329719621" duration="297000" />
+      <workItem from="1735329719621" duration="683000" />
     </task>
     <servers />
   </component>
