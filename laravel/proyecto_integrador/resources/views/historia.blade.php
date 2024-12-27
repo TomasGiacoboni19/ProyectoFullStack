@@ -30,7 +30,7 @@
         </div>
         <div class="col-6 textoTaller">
             <p>
-                Se encuentra en la localidad de Lomas de Zamora,
+                Nuestro taller se encuentra en la localidad de Lomas de Zamora,
                 Provincia de Buenos Aires, y cuenta con 800 metros cuadrados distribuidos
                 en tres áreas principales: la Planta Baja (recepción de telas y materiales,
                 y área de corte), la Planta Intermedia (oficinas administrativas y diseño) y

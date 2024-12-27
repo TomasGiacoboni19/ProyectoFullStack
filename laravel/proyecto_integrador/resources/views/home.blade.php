@@ -15,9 +15,10 @@
 <body>
 @include('header')
     <img src="fotos/fondo.gif" alt="fondo" id="fondo">
+
 @include('historia')
-@include('nosotros')
 @include('locales')
+@include('nosotros')
 @include('categorias.categorias')
 @include('slider')
 @include('footer')
