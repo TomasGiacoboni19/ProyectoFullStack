@@ -13,7 +13,7 @@
     <title>Categorias</title>
 </head>
 <body>
-@include('header')
+@include('header', ['carrito' => $carrito])
 <h1>Categoria {{$categoria->nombre_categoria}} </h1>
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">

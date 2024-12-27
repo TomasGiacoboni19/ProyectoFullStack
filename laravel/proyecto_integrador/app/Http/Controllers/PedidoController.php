@@ -41,12 +41,12 @@ class PedidoController extends Controller
 
     public function show(Pedido $pedido)
     {
-        return view('pedidos.carrito_compras', ['pedido' => $pedido]);
+        return view('pedidos.carrito_compras', ['pedido' => $pedido,'carrito' => $this->carrito() ]);
     }
 
     public function index(Cliente $cliente)
     {
-        return view('clientes.cliente_compras', ['pedidos' => $cliente->pedidos]);
+        return view('clientes.cliente_compras', ['pedidos' => $cliente->pedidos, 'carrito' => $this->carrito()]);
     }
 
     public function eliminarItem(Pedido $pedido,ProductoItem $item)

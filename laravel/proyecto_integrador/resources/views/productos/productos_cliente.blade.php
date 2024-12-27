@@ -13,7 +13,8 @@
     <title>Mis productos</title>
 </head>
 <body>
-@include('header')
+@include('header', ['carrito' => $carrito])
+
         <div id="contenedorProductos">
             @if (session('success'))
             <div class="alert alert-success">

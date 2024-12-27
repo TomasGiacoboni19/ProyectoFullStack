@@ -25,6 +25,7 @@ class PagoController extends Controller
             'localizaciones' => $localizaciones,
             'favoritos' => $favoritos,
             'medioDePagos' => $mediosDePago,
+            'carrito' => $this->carrito(),
         ];
 
         return view('pedidos.generar_pago', $parametros);
@@ -69,7 +70,7 @@ class PagoController extends Controller
         ];
 
         Gmail::enviar($paramatros);
-        return view('pedidos.pago_realizado', [ 'pedido' => $pedido]);
+        return view('pedidos.pago_realizado', [ 'pedido' => $pedido, 'carrito' => $this->carrito()]);
 
     }
 

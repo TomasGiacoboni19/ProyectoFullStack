@@ -11,6 +11,13 @@
     <div class="alert alert-success">
         {{ session('success') }}
     </div>
+
+    @if (session('fail'))
+        <div class="alert alert-danger">
+            {{ session('fail') }}
+        </div>
+    @endif
+
 @endif
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
     <div class="card shadow" style="width: 24rem;">

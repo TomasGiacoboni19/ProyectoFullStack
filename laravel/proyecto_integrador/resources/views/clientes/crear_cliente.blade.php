@@ -13,7 +13,7 @@
     <title>Mi perfil</title>
 </head>
 <body>
-@include('header')
+@include('header', ['carrito' => $carrito])
 
 @if ($errors->has('usuario'))
     <div class="alert alert-danger">

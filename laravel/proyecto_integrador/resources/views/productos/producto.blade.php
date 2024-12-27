@@ -13,7 +13,7 @@
     <title>Producto</title>
 </head>
 <body>
-@include('header')
+@include('header', ['carrito' => $pedido])
 
     <section id="producto-detalle">
 
