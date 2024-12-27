@@ -13,7 +13,6 @@
     <title>Nosotros</title>
 </head>
 <body>
-@include('header')
 <div class="container text-center">
         <h1>Nosotros</h1>
         <div class="row mt-5 d-flex min-vh-100" >
@@ -55,6 +54,5 @@
             </div>
         </div>
     </div>
-@include('footer')
 </body>
 </html>

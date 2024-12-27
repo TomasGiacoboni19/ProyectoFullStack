@@ -13,7 +13,6 @@
     <title>Locales</title>
 </head>
 <body>
-@include('header')
 <div class="container-fluid mt-5">
     <div class="row mt-5">
         <div class="col ps-5 " id="Locales">
@@ -51,6 +50,5 @@
         crossorigin="anonymous"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsYtV3Byz08iUJiunQOAf9U3f8WG-W5TM&callback=initMap"></script>
 <script src="{{ asset('js/map.js') }}"></script>
-@include('footer')
 </body>
 </html>

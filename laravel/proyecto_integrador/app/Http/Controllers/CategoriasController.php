@@ -10,6 +10,11 @@ class CategoriasController extends Controller
     {
         return view('categorias.categorias', ['categorias' => Categoria::all()]);
     }
+    public function home()
+    {
+        $parametros=['categorias'=>categoria::all()];
+        return view('home', $parametros);
+    }
 
     public function show(Categoria $categoria)
     {

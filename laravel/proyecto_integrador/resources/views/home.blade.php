@@ -14,8 +14,11 @@
 <body>
 @include('header')
     <img src="fotos/fondo.gif" alt="fondo" id="fondo">
-    @php
-    $cont = 1; 
+@include('nosotros')
+@include('locales')
+@include('categorias.categorias')
+@php
+    $cont = 1;
     @endphp
     @foreach($productos as $producto)
     @if ($cont == 1)
@@ -28,7 +31,7 @@
     @endphp
     @endforeach
     @php
-    $cont = 1; 
+    $cont = 1;
     @endphp
     @foreach($productos as $producto)
     @if($cont == 1)
@@ -45,6 +48,7 @@
           <ul class="wo-credit">
             <li>{{$producto->nombre_categoria}}</li>
             <li>{{$producto->stock_producto}}</li>
+          </ul>
         </figcaption>
       </figure>
       @php
@@ -53,15 +57,15 @@
     @endforeach
     <div class="js-slider_nav">
       {{--Los del primero siempre son iguales--}}
-      <label class="js-slider_nav_item s-nav-{{1}} prev" for="s-{{count($productos)}}"></label> {{--anterior--}} 
+      <label class="js-slider_nav_item s-nav-{{1}} prev" for="s-{{count($productos)}}"></label> {{--anterior--}}
       <label class="js-slider_nav_item s-nav-{{1}} next" for="s-2"></label> {{--siguiente--}}
     @for($i = 2; $i <= count($productos); $i++)
         @if($i!=count($productos))
-        <label class="js-slider_nav_item s-nav-{{$i}} prev" for="s-{{$i-1}}"></label> {{--anterior--}} 
+        <label class="js-slider_nav_item s-nav-{{$i}} prev" for="s-{{$i-1}}"></label> {{--anterior--}}
         <label class="js-slider_nav_item s-nav-{{$i}} next" for="s-{{$i+1}}"></label> {{--siguiente--}}
         @endif
         {{--Llegue al último elemento--}}
-        <label class="js-slider_nav_item s-nav-{{$i}} prev" for="s-{{$i-1}}"></label> {{--anterior--}} 
+        <label class="js-slider_nav_item s-nav-{{$i}} prev" for="s-{{$i-1}}"></label> {{--anterior--}}
         <label class="js-slider_nav_item s-nav-{{$i}} next" for="s-1"></label> {{--siguiente--}}
       </div>
     @endfor
@@ -71,5 +75,5 @@
         @endfor
       </div>
     </div>
-@include('footer')
 </body>
+@include('footer')
