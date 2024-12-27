@@ -10,10 +10,8 @@ use App\Http\Controllers\ProductosxCliente;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\CategoriasController;
 
-Route::get('/', function () {
-    $parametros = ['productos' => Producto::take(3)->get()];
-    return view('home', $parametros);
-});
+
+Route::get('/',[CategoriasController::class,'home']);
 
 Route::get('/productos/{producto}/editar', [ProductoController::class, 'edit'])->middleware('auth');
 Route::put('/productos/{producto}/editar', [ProductoController::class, 'update']);

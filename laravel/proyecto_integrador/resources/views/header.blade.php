@@ -27,15 +27,16 @@
                     @auth
                         <a href="/clientes/{{ auth()->user()->id_cliente }}" class="btn btn-outline-light me-2"><i class="bi bi-person-circle"></i></a>
                         <a href="/logout" class="btn btn-outline-light me-2">Cerrar Sesión</a>
+                        <div class="position-relative">
+                            <a href="/pedidos/{{$carrito->id_pedido}}" class="btn btn-outline-light">
+                                <i class="bi bi-cart"></i>
+                            </a>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{$carrito->item->count()}}</span>
+                        </div>
                     @else
                         <a href="/login" class="btn btn-outline-light me-2">Iniciar Sesión</a>
                     @endauth
-                    <div class="position-relative">
-                        <a href="/carrito" class="btn btn-outline-light">
-                            <i class="bi bi-cart"></i>
-                        </a>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-                    </div>
+
                 </div>
             </div>
         </div>

@@ -10,8 +10,6 @@ use Illuminate\Http\Request;
 class ClienteController extends Controller
 {
 
-
-
     public function create(){
         return view("clientes.crear_cliente");
     }
@@ -52,7 +50,7 @@ class ClienteController extends Controller
 
     public function show(Cliente $cliente)
     {
-        return view('clientes.cliente_perfil', ['cliente' => $cliente]);
+        return view('clientes.cliente_perfil', ['cliente' => $cliente,'carrito' => $this->carrito()]);
     }
 
     public function login()

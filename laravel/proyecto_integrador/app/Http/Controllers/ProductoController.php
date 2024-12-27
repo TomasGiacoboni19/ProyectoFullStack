@@ -15,7 +15,7 @@ class ProductoController extends Controller
 
     public function index()
     {
-        $paramatros = ['productos' => Producto::all()];
+        $paramatros = ['productos' => Producto::all(), 'carrito' => $this->carrito()];
 
         return view('productos.productos', $paramatros); //Le mando todos los productos
     }
@@ -24,8 +24,8 @@ class ProductoController extends Controller
 
     public function create()
     {
-        $parametros = ['categorias' => Categoria::all()];
-        return view("productos.crear_producto", $parametros); //Le mando todos los productos
+        $parametros = ['categorias' => Categoria::all(), 'carrito' => $this->carrito()];
+        return view("productos.crear_producto", $parametros);
 
     }
 
@@ -73,7 +73,7 @@ class ProductoController extends Controller
 
     public function edit(Producto $producto)
     {
-        return view("productos.editar_producto", ["producto" => $producto]);
+        return view("productos.editar_producto", ["producto" => $producto, 'carrito' => $this->carrito()]);
     }
 
 

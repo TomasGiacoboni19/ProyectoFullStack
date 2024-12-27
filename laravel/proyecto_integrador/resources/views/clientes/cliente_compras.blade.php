@@ -13,7 +13,7 @@
     <title>Mis compras</title>
 </head>
 <body>
-@include('header')
+@include('header', ['carrito' => $carrito])
 <section id="mis-compras">
     <h2 class="section-title">Mis Compras</h2>
     <div class="compras-list">

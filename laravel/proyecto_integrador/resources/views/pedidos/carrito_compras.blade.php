@@ -13,7 +13,7 @@
     <title>Mi pedido</title>
 </head>
 <body>
-@include('header')
+@include('header', ['carrito' => $carrito])
 <section id="carrito">
     <h2 class="section-title">
         @if($pedido->carritoDisponible)

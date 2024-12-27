@@ -13,7 +13,7 @@
     <title>Mi perfil</title>
 </head>
 <body>
-@include('header')
+@include('header', ['carrito' => $carrito])
 
 <section id="mi-perfil">
     <h2 class="section-title">Mi Perfil</h2>

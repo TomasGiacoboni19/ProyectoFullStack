@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     function nosotros(){
-        return view('nosotros');
+        return view('nosotros',['carrito' => $this->carrito()]);
     }
     function locales()
     {
