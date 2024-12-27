@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cliente;
 use App\Models\medioDePago;
 use App\Models\Pedido;
 use App\Service\Notificacion\Gmail\Gmail;
@@ -35,13 +36,15 @@ class PagoController extends Controller
         $pedido->carritoDisponible = 0;
         $pedido->save();
 
+        $cliente = Cliente::find(auth()->id());
+
         $paramatros = [
-            'destinatario' => auth()->user()->mail(),
+            'destinatario' => $cliente->mail,
             'plantilla' => "emails.compra",
-            'contenido' => $pedido,
+            'contenido' => ['pedido' => $pedido],
         ];
 
-     //   Gmail::enviar($paramatros);
+        Gmail::enviar($paramatros);
         return view('pedidos.pago_realizado', [ 'pedido' => $pedido]);
 
     }
