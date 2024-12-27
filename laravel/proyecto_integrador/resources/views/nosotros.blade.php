@@ -13,7 +13,7 @@
     <title>Nosotros</title>
 </head>
 <body>
-<div class="container text-center">
+<div class="container text-center mt-5">
         <h1>Nosotros</h1>
         <div class="row mt-5 d-flex min-vh-100" >
             <div class="col ">
