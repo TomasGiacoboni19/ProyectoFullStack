@@ -14,52 +14,65 @@
 </head>
 <body>
 @include('header')
-    @if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
-
-    @if (session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-    @endif
-    @if($productos->isEmpty())
-        <h1>No tenes productos, agregalos desde <a href="/productos/crear">aca</a>.</h1>
-    @else
-        <h1>Mis productos</h1>
-        <a href="/productos/crear"><button class="btn btn-sm btn-primary">Agregar nuevo producto</button></a>
-        <table class="table table-striped table-hover">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Descripción</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($productos as $producto)
-                    <tr>
-                        <td>{{ $producto->id_producto }}</td>
-                        <td>{{ $producto->nombre_producto }}</td>
-                        <td>{{ $producto->descripcion_producto }}</td>
-                        <td>${{ number_format($producto->precio_producto, 2) }}</td>
-                        <td>
-                            <a href="/productos/{{ $producto->id_producto }}/editar" class="btn btn-sm btn-primary">Editar</a>
-                            <form action="/productos/{{ $producto->id_producto }}" method="POST" class="d-inline">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-    @endif
+        <div id="contenedorProductos">
+            @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
+        @if($productos->isEmpty())
+            <h1>No tenes productos, ¡prueba a agregar alguno!.</h1>
+        @else
+            <h1>Mis productos</h1>
+            <div class="container">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($productos as $producto)
+                            <tr>
+                                <td>
+                                    @if(empty($producto->foto_producto))
+                                        <img class="fotoProd" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Imagen no disponible">
+                                    @else
+                                        <img class="fotoProd" src="{{ asset('storage/' . $producto->foto_producto) }}" alt="Foto del producto">
+                                    @endif
+                                </td>
+                                <td>{{ $producto->nombre_producto }}</td>
+                                <td>{{ $producto->descripcion_producto }}</td>
+                                <td>${{ number_format($producto->precio_producto, 2) }}</td>
+                                <td>
+                                    <a href="/productos/{{ $producto->id_producto }}/editar" class="btn btn-sm btn-primary">Editar</a>
+                                    <form action="/productos/{{ $producto->id_producto }}" method="POST" class="d-inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        @endif
+        <a href="/productos/crear">
+            <button class="btn btn-sm btn-primary botonAgregar">
+                <i class="bi bi-plus-lg"></i>
+            </button>
+        </a>
+    </div>
 @include('footer')
 </body>
 </html>

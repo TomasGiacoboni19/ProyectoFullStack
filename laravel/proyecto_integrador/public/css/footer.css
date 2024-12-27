@@ -2,7 +2,7 @@
 footer {
     background-color: #1e1e1e;
     color: #ffffff;
-    position: static;
+    bottom: 0px;
 }
 
 footer h3 {

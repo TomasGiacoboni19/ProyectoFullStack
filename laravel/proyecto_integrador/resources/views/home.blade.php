@@ -14,40 +14,62 @@
 <body>
 @include('header')
     <img src="fotos/fondo.gif" alt="fondo" id="fondo">
-    <div class="container container-slide">
-        <div class="row slider">
-            <div class="col-4">
-                <p>Productos destacados</p>
-            </div>
-            <div class="col-8">
-              <div id="carouselExampleIndicators" class="carousel slide"  data-bs-theme="dark">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="fotos/image.png" class="d-block " alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="fotos/image.png" class="d-block " alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="fotos/image.png" class="d-block " alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+    @php
+    $cont = 1; 
+    @endphp
+    @foreach($productos as $producto)
+    @if ($cont == 1)
+    <input type="radio" id="s-1" name="slider-control" checked="checked">
+    @else
+    <input type="radio" id="s-{{$cont}}" name="slider-control">
+    @endif
+    @php
+      $cont++;
+    @endphp
+    @endforeach
+    @php
+    $cont = 1; 
+    @endphp
+    @foreach($productos as $producto)
+    @if($cont == 1)
+    <div class="js-slider">
+    @endif
+      <figure class="js-slider_item img-{{$cont}}">
+        <div class="js-slider_img">
+          <img class="c-img-w-full" src="{{ asset('storage/' . $producto->foto_producto) }}" alt="...">
         </div>
+        <figcaption class="wo-caption">
+          <h3 class="wo-h3">
+            <div class="c-label">${{$producto->precio_producto}}</div>
+            <br class="view-sm mb-s">{{$producto->nombre_producto}}</h3>
+          <ul class="wo-credit">
+            <li>{{$producto->nombre_categoria}}</li>
+            <li>{{$producto->stock_producto}}</li>
+        </figcaption>
+      </figure>
+      @php
+      $cont++;
+      @endphp
+    @endforeach
+    <div class="js-slider_nav">
+      {{--Los del primero siempre son iguales--}}
+      <label class="js-slider_nav_item s-nav-{{1}} prev" for="s-{{count($productos)}}"></label> {{--anterior--}} 
+      <label class="js-slider_nav_item s-nav-{{1}} next" for="s-2"></label> {{--siguiente--}}
+    @for($i = 2; $i <= count($productos); $i++)
+        @if($i!=count($productos))
+        <label class="js-slider_nav_item s-nav-{{$i}} prev" for="s-{{$i-1}}"></label> {{--anterior--}} 
+        <label class="js-slider_nav_item s-nav-{{$i}} next" for="s-{{$i+1}}"></label> {{--siguiente--}}
+        @endif
+        {{--Llegue al último elemento--}}
+        <label class="js-slider_nav_item s-nav-{{$i}} prev" for="s-{{$i-1}}"></label> {{--anterior--}} 
+        <label class="js-slider_nav_item s-nav-{{$i}} next" for="s-1"></label> {{--siguiente--}}
+      </div>
+    @endfor
+      <div class="js-slider_indicator">
+        @for($i = 1; $i <= count($productos); $i++)
+        <div class="js-slider-indi indi-{{$i}}"></div>
+        @endfor
+      </div>
     </div>
-  </div>
 @include('footer')
 </body>

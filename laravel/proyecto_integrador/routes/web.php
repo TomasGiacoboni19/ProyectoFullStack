@@ -1,16 +1,18 @@
 <?php
 
-use App\Http\Controllers\CategoriasController;
+use App\Models\Producto;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagoController;
 use App\Http\Controllers\PedidoController;
-use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProductosxCliente;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\CategoriasController;
 
 Route::get('/', function () {
-    return view('home');
+    $parametros = ['productos' => Producto::take(3)->get()];
+    return view('home', $parametros);
 });
 
 Route::get('/productos/{producto}/editar', [ProductoController::class, 'edit'])->middleware('auth');

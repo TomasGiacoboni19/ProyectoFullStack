@@ -152,3 +152,19 @@ footer {
 .producto-item button:hover {
     background-color: #555;
 }
+
+.fotoProd {
+    width: 80px;
+}
+
+.botonAgregar {
+    font-size: 20px;
+    border-radius: 60px;
+    position: absolute;
+    right: 10px;
+    bottom: 1px;
+}
+
+#contenedorProductos {
+    position: relative;
+}
