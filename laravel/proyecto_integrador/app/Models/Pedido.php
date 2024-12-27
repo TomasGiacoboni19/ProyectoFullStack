@@ -27,12 +27,16 @@ class Pedido extends Model
     {
         return $this->hasMany(ProductoItem::class, 'pedido_id');
     }
-    //                                                                  CLAVE FK PEDIDO,       CLAVE PK MEDIO_PAGO
+    //                                                         CLAVE FK PEDIDO,       CLAVE PK MEDIO_PAGO
     public function medioDePago()
     {
         return $this->belongsTo(medioDePago::class, 'medio_pago_id', 'id_medio_pago');
     }
 
+    public function direccion()
+    {
+        return $this->belongsTo(Direccion::class, 'direccion_entrega_id');
+    }
 
 
     public static function obtenerPedido(int $clienteId): Pedido
