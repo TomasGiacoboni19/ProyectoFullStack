@@ -8,7 +8,7 @@
         <div class="col-6 textoLocal ">
             <p>
                 DolceBanana nace como una marca que diseña y comercializa ropa en el año 2010
-                , comenzando con un pequeño local en el barrio de Palermo,
+                , comenzando con un pequeño local en el barrio de Recoleta,
                 Ciudad de Buenos Aires. <br>
                 Desde 2018 contamos con talleres propios que nos permiten abastecer puntos de venta en todo el país,
                 ofreciendo líneas de indumentaria que combinan estilo,

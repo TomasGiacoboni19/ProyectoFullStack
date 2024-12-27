@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af122576-25b3-4e7f-ad8d-13670eb1eadb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/historia.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/historia.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/map.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/historia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/historia.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/locales.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/locales.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +105,7 @@
       <workItem from="1734975846875" duration="11628000" />
       <workItem from="1735324258632" duration="1228000" />
       <workItem from="1735329146356" duration="213000" />
-      <workItem from="1735329719621" duration="7018000" />
+      <workItem from="1735329719621" duration="7402000" />
     </task>
     <servers />
   </component>
