@@ -9,12 +9,14 @@
                       <ul class="splide__list">
                             @foreach($productos as $producto)
                             <li class="splide__slide">
-                                @if(empty($producto->foto_producto))
-                                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Imagen no disponible">
-                                @else
-                                    <img class="card-img-top" src="{{ asset('storage/' . $producto->foto_producto) }}" alt="Foto del producto">
-                                @endif
-                                <p>${{$producto->precio_producto}}</p>
+                                <a href="/productos/{{$producto->id_producto}}">
+                                    @if(empty($producto->foto_producto))
+                                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Imagen no disponible">
+                                    @else
+                                        <img class="card-img-top" src="{{ asset('storage/' . $producto->foto_producto) }}" alt="Foto del producto">
+                                    @endif
+                                    <p>${{$producto->precio_producto}}</p>
+                                </a>
                             </li>
                             @endforeach
                       </ul>
