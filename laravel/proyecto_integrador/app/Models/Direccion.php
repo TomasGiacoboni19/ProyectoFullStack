@@ -7,14 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class Direccion extends Model
 {
     protected $table = 'direccion';
-    protected $primaryKey = 'cliente_id';
+    protected $primaryKey = 'id_direccion';
     public $timestamps = false;
 
-    protected $fillable = ["calle", "numero", "localizacion"];
+    protected $fillable = ["nombre", "numero", "localizacion_id", "cliente_id"];
 
-    public function localizacion(): BelongsTo {
-        return $this->belongsTo(Localizacion::class);
+    public function localizacion()
+    {
+        return $this->belongsTo(Localizacion::class, 'localizacion_id');
     }
 
-
+    public function cliente()
+    {
+        return $this->belongsTo(Cliente::class, 'cliente_id');
+    }
 }
