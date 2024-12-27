@@ -35,6 +35,9 @@
         @endif
     </div>
 </section>
+<a href="{{ route('pedidos.exportar') }}" class="btn btn-success">Descargar en PDF</a>
+
+
 @include('footer')
 </body>
 </html>

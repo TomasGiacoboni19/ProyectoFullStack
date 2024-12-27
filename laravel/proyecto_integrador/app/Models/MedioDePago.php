@@ -15,4 +15,5 @@ class medioDePago extends Model
         'nombre'
     ];
 
+
 }

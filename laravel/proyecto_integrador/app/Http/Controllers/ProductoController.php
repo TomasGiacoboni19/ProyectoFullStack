@@ -15,7 +15,6 @@ class ProductoController extends Controller
 
     public function index()
     {
-        $productos = Producto::with('categoria')->get();
         $paramatros = ['productos' => Producto::all()];
 
         return view('productos.productos', $paramatros); //Le mando todos los productos
@@ -47,7 +46,7 @@ class ProductoController extends Controller
             "foto.required" => "¡Foto del producto es obligatorio!"
         ]);
 
-        // Primero tengo que guardar la imagen 
+        // Primero tengo que guardar la imagen
 
         $pathFoto = $request->file('foto_producto')->store('fotos', 'public');
 

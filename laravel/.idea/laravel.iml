@@ -119,6 +119,12 @@
       <excludeFolder url="file://$MODULE_DIR$/proyecto_integrador/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/proyecto_integrador/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/proyecto_integrador/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/proyecto_integrador/vendor/barryvdh/laravel-dompdf" />
+      <excludeFolder url="file://$MODULE_DIR$/proyecto_integrador/vendor/dompdf/dompdf" />
+      <excludeFolder url="file://$MODULE_DIR$/proyecto_integrador/vendor/dompdf/php-font-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/proyecto_integrador/vendor/dompdf/php-svg-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/proyecto_integrador/vendor/masterminds/html5" />
+      <excludeFolder url="file://$MODULE_DIR$/proyecto_integrador/vendor/sabberworm/php-css-parser" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -40,7 +40,7 @@ Route::post('/login', [ClienteController::class, 'authenticate']);
 Route::get('/logout', [ClienteController::class, 'logout']);
 
 
-
+Route::get('/pedidos/exportar', [PedidoController::class, 'exportar'])->name('pedidos.exportar');
 Route::get('/pedidos/{pedido}', [PedidoController::class, 'show']);
 Route::post('/pedidos/{pedido}/productos', [PedidoController::class, 'agregarProducto']);
 Route::delete('/pedidos/{pedido}/items/{item}', [PedidoController::class, 'eliminarItem']);
@@ -52,3 +52,5 @@ Route::post('/pagos/{pedido}', [PagoController::class, 'generarPago']);
 
 Route::get('/nosotros',[HomeController::class,'nosotros']);
 Route::get('/locales',[HomeController::class,'locales']);
+
+

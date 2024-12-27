@@ -7,6 +7,7 @@ use App\Models\medioDePago;
 use App\Models\Pedido;
 use App\Models\Producto;
 use App\Models\ProductoItem;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 
@@ -67,5 +68,14 @@ class PedidoController extends Controller
         return redirect()->back()->with('success', 'Producto entregado gracias por su compra');
     }
 
+
+    public function exportar()
+    {
+        $pedidos = Pedido::where('cliente_id', auth()->id() )->get();
+
+        $pdf = PDF::loadView('pdf.pedidos', ['pedidos'=> $pedidos] );
+
+        return $pdf->download('pedidos.pdf');
+    }
 
 }

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cliente;
+use App\Service\Notificacion\Gmail\Gmail;
+use App\Service\Notificacion\Mensaje\MensajeBienvenida;
 use Illuminate\Http\Request;
 
 class ClienteController extends Controller
@@ -16,7 +18,6 @@ class ClienteController extends Controller
 
     public function store(Request $request)
     {
-
 
         $datos = $request->validate([
             "nombre" => ["required"],
@@ -34,8 +35,17 @@ class ClienteController extends Controller
 
         Cliente::ExisteUsuario($datos['usuario']);
 
+        $datos["password"] = bcrypt($datos["password"]);
         Cliente::create($datos);
 
+
+        $paramatros = [
+            'destinatario' => $datos['mail'],
+            'plantilla' => "emails.bienvenida",
+            'contenido' => $datos,
+        ];
+
+    //    Gmail::enviar($paramatros);
         return response()->redirectTo("/login")->with("success", "Usuario creado con exito");
 
     }

@@ -126,6 +126,12 @@
       <path value="$PROJECT_DIR$/proyecto_integrador/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/proyecto_integrador/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/proyecto_integrador/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/proyecto_integrador/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/proyecto_integrador/vendor/dompdf/php-font-lib" />
+      <path value="$PROJECT_DIR$/proyecto_integrador/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/proyecto_integrador/vendor/dompdf/php-svg-lib" />
+      <path value="$PROJECT_DIR$/proyecto_integrador/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/proyecto_integrador/vendor/masterminds/html5" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
