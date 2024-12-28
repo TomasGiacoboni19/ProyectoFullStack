@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+    <link  rel ="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{'css/login.css'}}">
+    <title>Document</title>
 </head>
 <body>
 @if (session('success'))
@@ -19,37 +24,35 @@
     @endif
 
 @endif
-<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-    <div class="card shadow" style="width: 24rem;">
-        <div class="card-body">
-            <h3 class="card-title text-center mb-4">Iniciar Sesión</h3>
-            <!-- Formulario de login -->
-            <form action="login" method="POST">
-                @csrf
-                <div class="mb-3">
-                    <label for="usuario" class="form-label">Usuario</label>
-                    <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ingresa tu usuario" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Ingresa tu contraseña" required>
-                </div>
-                <!-- Mensajes de error -->
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        @foreach ($errors->all() as $error)
-                            <p>{{ $error }}</p>
-                        @endforeach
-                    </div>
-                @endif
-                <button type="submit" class="btn btn-primary w-100">Ingresar</button>
-            </form>
-            <br>
-            <a href="/clientes/registro"> No tenes usuario? Registrate! </a>
-
+<div class="container">
+    <form action="login" class="form" method="POST">
+        @csrf
+        <p>
+            Bienvenido!<span>Inicia Sesión para continuar</span>
+        </p>
+        <div class="separator">
+            <div></div>
+            <span><i class="bi bi-box-arrow-in-right"></i></span>
+            <div></div>
         </div>
-    </div>
+        <label for="usuario"></label>
+        <input type="text" placeholder="Usuario" name="usuario" id="usuario" required>
+        <label for="password"></label>
+        <input type="text" name="password" id="password" placeholder="Contraseña"  required>
+        @if($errors->any())
+            <div class="alert alert-danger">
+                @foreach ($errors->all() as $error)
+                    <p>{{$error}}</p>
+                @endforeach
+            </div>
+        @endif
+        <button class="oauthButton" type="submit">
+            Ingresar
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"></path><path d="m13 17 5-5-5-5"></path></svg>
+        </button>
+    </form>
 </div>
+
 <?php
 echo password_hash("1234", PASSWORD_BCRYPT);
 ?>

@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af122576-25b3-4e7f-ad8d-13670eb1eadb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/login/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/login/login.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,7 @@
       <workItem from="1735416462871" duration="432000" />
       <workItem from="1735416901713" duration="48000" />
       <workItem from="1735416951634" duration="238000" />
-      <workItem from="1735417202468" duration="8486000" />
+      <workItem from="1735417202468" duration="10844000" />
     </task>
     <servers />
   </component>

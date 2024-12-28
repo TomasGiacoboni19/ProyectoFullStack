@@ -18,7 +18,7 @@
                     <a href="{{ url('/') }}#categorias" class="nav-link">Categorías</a>
                     <a href="/productos" class="nav-link">Productos</a>
                 </ul>
-               
+
                 <div class="d-flex align-items-center">
                     @auth
                         <a href="/clientes/{{ auth()->user()->id_cliente }}" class="btn btn-outline-light me-2"><i class="bi bi-person-circle"></i></a>
