@@ -53,10 +53,8 @@
         <div id="map"> </div>
     </div>
 </div>
-</div>
+</body>
 
-
-<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" crossorigin=""></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js "
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
@@ -66,5 +64,5 @@
         crossorigin="anonymous"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsYtV3Byz08iUJiunQOAf9U3f8WG-W5TM&callback=initMap"></script>
 <script src={{asset('js/map.js')}}></script>
-</body>
+
 </html>

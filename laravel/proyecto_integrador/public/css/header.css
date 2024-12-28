@@ -8,6 +8,7 @@
     animation: textoMov 5s linear infinite;
     white-space: nowrap;
     animation-timing-function: linear;
+    animation-direction: alternate;
 
 }
 .logo {

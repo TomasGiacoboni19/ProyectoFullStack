@@ -26,17 +26,19 @@
         @include('locales')
 </section>
 
+<section id="categorias">
+    @include('categorias.categorias')
+</section>
+
+<section id="slider">
+    @include('slider')
+</section>
+
 <section id="nosotros">
         @include('nosotros')
 </section>
 
-<section id="categorias">
-        @include('categorias.categorias')
-</section>
 
-<section id="slider">
-        @include('slider')
-</section>
 
 @include('footer')
 
