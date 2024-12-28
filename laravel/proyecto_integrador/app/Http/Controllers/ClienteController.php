@@ -11,7 +11,7 @@ class ClienteController extends Controller
 {
 
     public function create(){
-        return view("clientes.crear_cliente");
+        return view("clientes.crear_cliente", ['carrito' => $this->carrito()] );
     }
 
     public function store(Request $request)

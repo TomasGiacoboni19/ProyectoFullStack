@@ -8,7 +8,7 @@
         <div class="col-6 textoLocal ">
             <p>
                 DolceBanana nace como una marca que diseña y comercializa ropa en el año 2010
-                , comenzando con un pequeño local en el barrio de Palermo,
+                , comenzando con un pequeño local en el barrio de Recoleta,
                 Ciudad de Buenos Aires. <br>
                 Desde 2018 contamos con talleres propios que nos permiten abastecer puntos de venta en todo el país,
                 ofreciendo líneas de indumentaria que combinan estilo,
@@ -30,7 +30,7 @@
         </div>
         <div class="col-6 textoTaller">
             <p>
-                Se encuentra en la localidad de Lomas de Zamora,
+                Nuestro taller se encuentra en la localidad de Lomas de Zamora,
                 Provincia de Buenos Aires, y cuenta con 800 metros cuadrados distribuidos
                 en tres áreas principales: la Planta Baja (recepción de telas y materiales,
                 y área de corte), la Planta Intermedia (oficinas administrativas y diseño) y
