@@ -9,71 +9,73 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/editar_producto.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
-
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
     <title>Mis productos</title>
 </head>
 <body>
 @include('header', ['carrito' => $carrito])
-
-        <div id="contenedorProductos">
-            @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-            @endif
-            @if (session('error'))
-                <div class="alert alert-danger">
-                    {{ session('error') }}
-                </div>
-            @endif
-        @if($productos->isEmpty())
-            <h1>No tenes productos, ¡prueba a agregar alguno!.</h1>
-        @else
-            <h1>Mis productos</h1>
-            <div class="container">
-                <table class="table table-striped table-hover">
-                    <thead class="table-dark">
-                        <tr>
-                            <th scope="col">Imagen</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Descripción</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($productos as $producto)
-                            <tr>
-                                <td>
-                                    @if(empty($producto->foto_producto))
-                                        <img class="fotoProd" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Imagen no disponible">
-                                    @else
-                                        <img class="fotoProd" src="{{ asset('storage/' . $producto->foto_producto) }}" alt="Foto del producto">
-                                    @endif
-                                </td>
-                                <td>{{ $producto->nombre_producto }}</td>
-                                <td>{{ $producto->descripcion_producto }}</td>
-                                <td>${{ number_format($producto->precio_producto, 2) }}</td>
-                                <td>
-                                    <a href="/productos/{{ $producto->id_producto }}/editar" class="btn btn-sm btn-primary">Editar</a>
-                                    <form action="/productos/{{ $producto->id_producto }}" method="POST" class="d-inline">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+    <div id="contenedorProductos">
+        @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+        @endif
+        @if (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
             </div>
         @endif
-        <a href="/productos/crear">
-            <button class="btn btn-sm btn-primary botonAgregar">
-                <i class="bi bi-plus-lg"></i>
-            </button>
-        </a>
+    @if($productos->isEmpty())
+        <h1>No tenes productos, ¡prueba a agregar alguno!.</h1>
+    @else
+        <h1>Mis productos</h1>
+        <div class="container">
+            <table class="table table-striped table-hover" id="myTable">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($productos as $producto)
+                        <tr>
+                            <td>
+                                @if(empty($producto->foto_producto))
+                                    <img class="fotoProd" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Imagen no disponible">
+                                @else
+                                    <img class="fotoProd" src="{{ asset('storage/' . $producto->foto_producto) }}" alt="Foto del producto">
+                                @endif
+                            </td>
+                            <td>{{ $producto->nombre_producto }}</td>
+                            <td>{{ $producto->descripcion_producto }}</td>
+                            <td>${{ number_format($producto->precio_producto, 2) }}</td>
+                            <td>
+                                <a href="/productos/{{ $producto->id_producto }}/editar" class="btn btn-sm btn-primary">Editar</a>
+                                <form action="/productos/{{ $producto->id_producto }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+        @endif
+    <a href="/productos/crear">
+        <button class="btn btn-sm btn-primary botonAgregar">
+            <i class="bi bi-plus-lg"></i>
+        </button>
+    </a>
     </div>
 @include('footer')
+<script src={{asset("js/tablaProducto.js")}}></script>
 </body>
 </html>

@@ -28,17 +28,12 @@ Route::get('/clientes/{cliente}/productos', [ProductosxCliente::class, 'show']);
 Route::get('/clientes/{cliente}/pedidos', [PedidoController::class, 'index']);
 Route::get('/clientes/{cliente}', [ClienteController::class, 'show']);
 
-
-
 Route::get('/categorias',[CategoriasController::class,'index']);
 Route::get('/categorias/{categoria}',[CategoriasController::class,'show']);
-
-
 
 Route::get('/login', [ClienteController::class, 'login'])->name('login');
 Route::post('/login', [ClienteController::class, 'authenticate']);
 Route::get('/logout', [ClienteController::class, 'logout']);
-
 
 Route::get('/pedidos/exportar', [PedidoController::class, 'exportar'])->name('pedidos.exportar');
 Route::get('/pedidos/{pedido}', [PedidoController::class, 'show']);
@@ -52,5 +47,3 @@ Route::post('/pagos/{pedido}', [PagoController::class, 'generarPago']);
 
 Route::get('/nosotros',[HomeController::class,'nosotros']);
 Route::get('/locales',[HomeController::class,'locales']);
-
-
