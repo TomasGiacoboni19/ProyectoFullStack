@@ -2,10 +2,40 @@
 *{
     font-family: 'Inria Sans', sans-serif;
 }
-#fondo {
+
+
+.image-container {
+    position: relative;
     width: 100%;
+    max-width: 100%;
 }
 
+#fondo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.image-container p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 6rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    text-align: center;
+}
+
+
+#fondo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 .container-slide {
     width: 100%;
@@ -143,5 +173,7 @@
 }
 
 section{
-    padding-top: 90px; /* Ajusta este valor según el tamaño de tu header */
+    padding-top: 90px;
 }
+
+

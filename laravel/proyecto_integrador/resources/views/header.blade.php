@@ -18,12 +18,7 @@
                     <a href="{{ url('/') }}#categorias" class="nav-link">Categorías</a>
                     <a href="/productos" class="nav-link">Productos</a>
                 </ul>
-                <form class="d-flex me-3">
-                    <div class="input-group">
-                        <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
-                        <input class="form-control" type="text" placeholder="Buscar" aria-label="Buscar">
-                    </div>
-                </form>
+               
                 <div class="d-flex align-items-center">
                     @auth
                         <a href="/clientes/{{ auth()->user()->id_cliente }}" class="btn btn-outline-light me-2"><i class="bi bi-person-circle"></i></a>

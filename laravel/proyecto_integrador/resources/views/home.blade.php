@@ -13,8 +13,10 @@
 </head>
 @include('header')
 <body>
-<img src="fotos/fondo.gif" alt="fondo" id="fondo">
-
+<div class="image-container">
+<img src="fotos/fondo.gif" alt="fondo" id="fondo" >
+    <p>DOLCE BANANA<img width="96" height="96" src="https://img.icons8.com/fluency/96/banana.png" alt="banana"/></p>
+</div>
 <section id="historia">
         @include('historia')
 </section>

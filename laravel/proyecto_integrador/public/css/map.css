@@ -93,7 +93,7 @@
 }
 .card:hover {
     transform: translate(-15px, -15px);
-    border-color: #5bc0eb;
+    border-color: green;
 }
 
 .card:hover .card-hidden {
