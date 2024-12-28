@@ -20,15 +20,12 @@ class ProductoController extends Controller
         return view('productos.productos', $paramatros); //Le mando todos los productos
     }
 
-
-
     public function create()
     {
         $parametros = ['categorias' => Categoria::all(), 'carrito' => $this->carrito()];
         return view("productos.crear_producto", $parametros);
 
     }
-
 
     public function store(Request $request)
     {
@@ -39,11 +36,13 @@ class ProductoController extends Controller
             'categoria_id' => 'required',
             'foto_producto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             'vendedor_id' => 'required',
+            'descripcion_producto' => 'required',
         ], [
             "nombre_producto.required" => "¡Nombre del producto es obligatorio!",
             "precio_producto.required" => "¡Precio del producto es obligatorio!",
             "categoria.required" => "¡Categoría del producto es obligatorio!",
-            "foto.required" => "¡Foto del producto es obligatorio!"
+            "foto.required" => "¡Foto del producto es obligatorio!",
+            "descripcion_producto.required" => "¡Descripción del producto es obligatoria!" 
         ]);
 
         // Primero tengo que guardar la imagen
@@ -57,7 +56,6 @@ class ProductoController extends Controller
         return response()->redirectTo("/productos");
     }
 
-
     public function show(string $id)
     {
         $producto = Producto::findOrFail($id);
@@ -69,13 +67,10 @@ class ProductoController extends Controller
 
     }
 
-
-
     public function edit(Producto $producto)
     {
         return view("productos.editar_producto", ["producto" => $producto, 'carrito' => $this->carrito()]);
     }
-
 
     public function update(Request $request, Producto $producto)
     {
@@ -98,7 +93,6 @@ class ProductoController extends Controller
         return redirect("/productos/".$producto->id_producto)->with("success", "Se actualizo el producto de forma correcta");
     }
 
-
     public function destroy(Producto $producto)
     {
         try {
@@ -108,6 +102,4 @@ class ProductoController extends Controller
             return redirect()->back()->with('failed', $e->getMessage());
         }
     }
-
-
 }

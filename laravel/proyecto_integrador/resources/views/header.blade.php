@@ -16,7 +16,7 @@
                     <a href="{{ url('/') }}#locales" class="nav-link">Locales</a>
                     <a href="{{ url('/') }}#nosotros" class="nav-link">Nosotros</a>
                     <a href="{{ url('/') }}#categorias" class="nav-link">Categorías</a>
-                    <a href="{{ url('/') }}#slider" class="nav-link">Slider</a>
+                    <a href="/productos" class="nav-link">Productos</a>
                 </ul>
                 <form class="d-flex me-3">
                     <div class="input-group">

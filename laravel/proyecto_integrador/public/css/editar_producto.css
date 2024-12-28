@@ -1,13 +1,9 @@
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
 }
-
-
 
 nav {
     display: flex;
@@ -24,10 +20,6 @@ nav a {
     border-radius: 5px;
 }
 
-nav a:hover {
-    background-color: #555;
-}
-
 main {
     padding: 2rem;
     text-align: center;
@@ -37,6 +29,7 @@ main {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
+
 .producto-detail {
     text-align: left;
     max-width: 600px;
@@ -73,7 +66,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 0.3rem;
-    position: fixed;
     bottom: 0;
     width: 100%;
     font-size: 0.8rem;
@@ -141,7 +133,6 @@ footer {
 }
 
 .producto-item button {
-    background-color: #333;
     color: #fff;
     padding: 0.5rem 1rem;
     border: none;
@@ -149,9 +140,9 @@ footer {
     cursor: pointer;
 }
 
-.producto-item button:hover {
+/* .producto-item button:hover {
     background-color: #555;
-}
+} */
 
 .fotoProd {
     width: 80px;

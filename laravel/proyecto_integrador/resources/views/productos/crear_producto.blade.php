@@ -67,6 +67,11 @@
                         </div>
 
                         <div class="mb-3">
+                            <label for="descripcion_producto" class="form-label">Descripción del producto: </label>
+                            <input type="text" name="descripcion_producto" id="descripcion_producto" class="form-control" placeholder="Ingrese una descripcion para su producto">
+                        </div>
+
+                        <div class="mb-3">
                             <label for="foto_producto" class="form-label">Foto del Producto:</label>
                             <input type="file" name="foto_producto" id="foto_producto" class="form-control">
                         </div>
