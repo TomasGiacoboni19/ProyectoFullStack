@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af122576-25b3-4e7f-ad8d-13670eb1eadb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/categoria.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/categorias.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/categorias/categoria.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/categorias/categoria.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/categorias/categorias.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/categorias/categorias.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/locales.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/locales.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/productos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/productos.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +45,7 @@
     &quot;PHPUnit.database.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/ProyectoFinal&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/ProyectoFullStack&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -116,6 +108,10 @@
       <workItem from="1735329146356" duration="213000" />
       <workItem from="1735329719621" duration="8641000" />
       <workItem from="1735395589604" duration="11213000" />
+      <workItem from="1735416462871" duration="432000" />
+      <workItem from="1735416901713" duration="48000" />
+      <workItem from="1735416951634" duration="238000" />
+      <workItem from="1735417202468" duration="1547000" />
     </task>
     <servers />
   </component>

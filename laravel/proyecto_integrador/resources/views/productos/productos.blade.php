@@ -6,49 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/header.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{asset('css/categoria.css')}}">
 
     <title>Productos</title>
 </head>
+@include('header',['carrito'=>$carrito])
 <body>
-@include('header')
-
-<main class="container my-5">
-    <h1 class="text-center mb-4">Productos que tenemos</h1>
-    <section class="py-5">
-        <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                @foreach($productos as $producto)
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Imagen del producto -->
-                            @if(empty($producto->foto_producto))
-                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Imagen no disponible">
-                            @else
-                                <img class="card-img-top" src="{{ asset('storage/' . $producto->foto_producto) }}" alt="Foto del producto">
-                            @endif
-                            <!-- Detalles del producto -->
-                            <div class="card-body p-4 text-center">
-                                <h5 class="fw-bold">Nombre: {{ $producto->nombre_producto }}</h5>
-                                <p>Precio: ${{ $producto->precio_producto }}</p>
-                                <p>Categoría: {{ $producto->categoria->nombre_categoria }}</p>
-                            </div>
-                            <!-- Enlace de compra -->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="/productos/{{ $producto->id_producto }}">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
+<div class="tituloCategorias">
+    <span>Productos</span>
+</div>
+<div class="row">
+    @foreach($productos as $producto)
+        <div class="col d-flex justify-content-center mt-5">
+            <div class="carta ">
+                <div class="carta-img"><div class="img"></div> <img src="{{asset('storage/'.$producto->foto_producto)}}" alt=""></div>
+                <div class="carta-title">{{$producto->nombre_producto}}</div>
+                <div class="carta-subtitle">{{$producto->descripcion_producto}}.</div>
+                <hr class="carta-divider">
+                <div class="carta-footer">
+                    <div class="carta-price"><span>$</span> {{$producto->precio_producto}}</div>
+                    <button class="carta-btn">
+                        <a href="/productos/{{$producto->id_producto}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg></a>
+                    </button>
+                </div>
             </div>
         </div>
-    </section>
-</main>
+    @endforeach
+</div>
 
-@include('footer')
 
-<!-- Bootstrap core JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+@include('footer')
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </html>
+
