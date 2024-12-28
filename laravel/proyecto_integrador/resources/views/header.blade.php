@@ -12,10 +12,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="/categorias">Categorías</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/productos">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/nosotros">¿Quiénes Somos?</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/locales">Locales</a></li>
+                    <a href="{{ url('/') }}#historia" class="nav-link">Historia</a>
+                    <a href="{{ url('/') }}#locales" class="nav-link">Locales</a>
+                    <a href="{{ url('/') }}#nosotros" class="nav-link">Nosotros</a>
+                    <a href="{{ url('/') }}#categorias" class="nav-link">Categorías</a>
+                    <a href="{{ url('/') }}#slider" class="nav-link">Slider</a>
                 </ul>
                 <form class="d-flex me-3">
                     <div class="input-group">

@@ -51,3 +51,11 @@
     100% { transform: translateX(-100%); }
 }
 
+header {
+    position: sticky;  /* Hace que el header se quede pegado a la parte superior */
+    top: 0;            /* Asegura que esté en la parte superior */
+    z-index: 1000;     /* Asegura que el header esté por encima de otros elementos */
+    background-color: transparent; /* Fondo transparente (ya no negro) */
+    box-shadow: none;   /* Elimina cualquier sombra si la hay */
+}
+

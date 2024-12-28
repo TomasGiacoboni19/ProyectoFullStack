@@ -24,7 +24,7 @@
     padding: 0;
     box-sizing: border-box;
   }
- 
+
   li {
     list-style: none;
   }
@@ -102,7 +102,7 @@
   .view-sm {
     display: none;
   }
-  
+
 .splide__slide img {
   object-fit: cover;
   width: 9rem;
@@ -139,4 +139,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+section{
+    padding-top: 90px; /* Ajusta este valor según el tamaño de tu header */
 }
