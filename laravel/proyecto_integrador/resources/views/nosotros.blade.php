@@ -9,50 +9,52 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/nosotros.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
-
     <title>Nosotros</title>
 </head>
-<body>
-<div class="container text-center mt-5">
-        <h1>Nosotros</h1>
-        <div class="row mt-5 d-flex min-vh-100" >
-            <div class="col ">
-                <div class="presentacion ">
-                    <div class="imagen ">FOTO</div>
-                    <div class="texto">
-                        <h4>Nombre</h4>
-                        <p>Descripcion</p>
-                    </div>
+
+<div class="section-title">
+    <span>Nosotros</span>
+</div>
+<div class="fondo-verde">
+<div class="container text-center">
+    <div class="row d-flex min-vh-100 " >
+        <div class="col ">
+            <div class="presentacion ">
+                <div class="imagen ">FOTO</div>
+                <div class="texto">
+                    <h4>Nombre</h4>
+                    <p>Descripcion</p>
                 </div>
             </div>
-            <div class="col ">
-                <div class="presentacion ">
-                    <div class="imagen ">FOTO</div>
-                    <div class="texto">
-                        <h4>Nombre</h4>
-                        <p>Descripcion</p>
-                    </div>
+        </div>
+        <div class="col ">
+            <div class="presentacion ">
+                <div class="imagen ">FOTO</div>
+                <div class="texto">
+                    <h4>Nombre</h4>
+                    <p>Descripcion</p>
                 </div>
             </div>
-            <div class="col ">
-                <div class="presentacion ">
-                    <div class="imagen ">FOTO</div>
-                    <div class="texto">
-                        <h4>Nombre</h4>
-                        <p>Descripcion</p>
-                    </div>
+        </div>
+        <div class="col ">
+            <div class="presentacion ">
+                <div class="imagen ">FOTO</div>
+                <div class="texto">
+                    <h4>Nombre</h4>
+                    <p>Descripcion</p>
                 </div>
             </div>
-            <div class="col ">
-                <div class="presentacion ">
-                    <div class="imagen ">FOTO</div>
-                    <div class="texto">
-                        <h4>Nombre</h4>
-                        <p>Descripcion</p>
-                    </div>
+        </div>
+        <div class="col ">
+            <div class="presentacion ">
+                <div class="imagen ">FOTO</div>
+                <div class="texto">
+                    <h4>Nombre</h4>
+                    <p>Descripcion</p>
                 </div>
             </div>
         </div>
     </div>
-</body>
+</div>
+</div>
 </html>

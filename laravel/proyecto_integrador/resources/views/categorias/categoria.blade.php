@@ -21,7 +21,7 @@
         <div class="carta ">
             <div class="carta-img"><div class="img"></div> <img src="{{asset('storage/'.$producto->foto_producto)}}" alt=""></div>
             <div class="carta-title">{{$producto->nombre_producto}}</div>
-            <div class="carta-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            <div class="carta-subtitle">{{$producto->descripcion_producto}}</div>
             <hr class="carta-divider">
             <div class="carta-footer">
                 <div class="carta-price"><span>$</span> {{$producto->precio_producto}}</div>

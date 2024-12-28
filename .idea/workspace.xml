@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af122576-25b3-4e7f-ad8d-13670eb1eadb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/slider.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/productos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/productos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/categorias.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/categorias.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/historia.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/historia.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/nosotros.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/nosotros.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/categorias/categoria.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/categorias/categoria.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/categorias/categorias.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/categorias/categorias.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/historia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/historia.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/nosotros.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/nosotros.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/slider.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +120,7 @@
       <workItem from="1735416462871" duration="432000" />
       <workItem from="1735416901713" duration="48000" />
       <workItem from="1735416951634" duration="238000" />
-      <workItem from="1735417202468" duration="1547000" />
+      <workItem from="1735417202468" duration="6744000" />
     </task>
     <servers />
   </component>
@@ -125,6 +134,11 @@
           <url>file://$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/locales.blade.php</url>
           <line>58</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/slider.blade.php</url>
+          <line>30</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

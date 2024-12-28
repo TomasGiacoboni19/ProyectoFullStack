@@ -9,13 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{asset('css/home.css') }}">
-
     <title>Dolce Banana</title>
 </head>
-<body>
-
 @include('header')
-
+<body>
 <img src="fotos/fondo.gif" alt="fondo" id="fondo">
 
 <section id="historia">

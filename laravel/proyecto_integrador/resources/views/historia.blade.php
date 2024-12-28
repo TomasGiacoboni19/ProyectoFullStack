@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="{{asset('css/historia.css')}}">
 <body>
-<div class="container">
-    <div class="section-title">
-        <span>Nuestra Historia</span>
-    </div>
+<div class="section-title">
+    <span>Nuestra Historia</span>
+</div>
+<div class="Fondo">
+    <div class="container">
     <div class="row Local mt-5">
         <div class="col-6 textoLocal ">
             <p>
@@ -40,5 +41,6 @@
             </p>
         </div>
     </div>
+</div>
 </div>
 </body>
