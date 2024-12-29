@@ -19,7 +19,7 @@ class GmailAdaptado extends Mailable
     public function build()
     {
         return $this->view($this->plantilla)
-            ->subject("Decco Libre")
+            ->subject("Dolce banana")
             ->with($this->contenido);
     }
 }

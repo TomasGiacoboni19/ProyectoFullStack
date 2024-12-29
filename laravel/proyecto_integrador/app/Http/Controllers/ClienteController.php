@@ -40,10 +40,10 @@ class ClienteController extends Controller
         $paramatros = [
             'destinatario' => $datos['mail'],
             'plantilla' => "emails.bienvenida",
-            'contenido' => $datos,
+            'contenido' => ['datos'=>$datos],
         ];
 
-    //    Gmail::enviar($paramatros);
+        Gmail::enviar($paramatros);
         return response()->redirectTo("/login")->with("success", "Usuario creado con exito");
 
     }
