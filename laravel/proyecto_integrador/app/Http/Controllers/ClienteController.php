@@ -79,4 +79,13 @@ class ClienteController extends Controller
         return response()->redirectTo("/");
     }
 
+    //Revisar, agregado por Tomi el Sábado
+    public function perfil()
+    {
+        $cliente = auth()->user(); // Obtener el cliente autenticado
+        $carrito = session()->get('carrito', []); // Obtener el carrito desde la sesión (o ajustarlo según tu lógica)
+
+        return view('clientes.cliente_perfil', compact('cliente', 'carrito'));
+    }
+
 }

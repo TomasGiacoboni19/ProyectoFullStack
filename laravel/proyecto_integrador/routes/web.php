@@ -46,3 +46,11 @@ Route::post('/pagos/{pedido}', [PagoController::class, 'generarPago']);
 
 Route::get('/nosotros',[HomeController::class,'nosotros']);
 Route::get('/locales',[HomeController::class,'locales']);
+Route::get('/historia',[HomeController::class,'historia']);
+Route::get('/categorias',[HomeController::class,'categorias']);
+Route::get('/productos-destacados',[HomeController::class,'productos-destacados']);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/perfil', [ClienteController::class, 'perfil'])->name('perfil');});
+
+
+

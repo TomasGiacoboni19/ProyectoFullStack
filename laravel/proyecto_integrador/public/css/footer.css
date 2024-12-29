@@ -3,6 +3,9 @@ footer {
     background-color: #1e1e1e;
     color: #ffffff;
     bottom: 0px;
+    position: relative; /* Asegúrate de que no esté fijo */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    padding: 20px 0; /* Espaciado interno */
 }
 
 footer h3 {
@@ -49,4 +52,17 @@ footer p {
     font-size: 0.8rem;
     color: #bbbbbb;
     margin-top: 20px;
+}
+/* Ajustes para el nuevo ícono */
+.custom-icon {
+    width: 16px; /* Tamaño igual al de los íconos actuales */
+    height: 16px;
+    margin-right: 10px; /* Espaciado similar al de los íconos con la clase 'bi' */
+    vertical-align: middle; /* Alineación con el texto */
+    filter: invert(100%); /* Convierte el ícono a blanco para que coincida con los otros */
+}
+
+/* Hover (opcional, si deseas que cambie de color como los enlaces) */
+.custom-icon:hover {
+    filter: invert(50%) sepia(93%) saturate(748%) hue-rotate(93deg) brightness(93%) contrast(92%);
 }

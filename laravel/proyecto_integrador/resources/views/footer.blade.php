@@ -1,37 +1,40 @@
 <footer class="bg-dark text-white py-4">
     <div class="container">
         <div class="row text-center text-md-start">
+            <!-- Sección Dolce Banana -->
             <div class="col-md-4 mb-4">
-                <h3 class="text-uppercase text-success">MarcaDeRopa</h3>
+                <h3 class="text-uppercase text-success"<a href="{{ url('/') }}#home" >Dolce Banana</a></h3>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-geo-alt"></i> 123 Calle Ejemplo, Ciudad 10660</li>
-                    <li><i class="bi bi-telephone"></i> 010-020-0340</li>
-                    <li><i class="bi bi-envelope"></i> info@marca.com</li>
+                    <li><img src="https://img.icons8.com/ios/50/open-book--v1.png" alt="Historia" class="custom-icon"><a href="{{ url('/') }}#historia">Nuestra Historia</a></li>
+                    <li><i class="bi bi-geo-alt"></i><a href="{{ url('/') }}#locales" >Locales</a></li>
+                    <li><img src="https://img.icons8.com/wired/64/categorize.png" alt="Categorias" class="custom-icon"/><a href="{{ url('/') }}#categorias" >Categorias</a></li>
+                    <li><img src="https://img.icons8.com/ios-glyphs/30/group.png" alt="Nosotros" class="custom-icon"><a href="{{ url('/') }}#nosotros" >Nosotros</a></li>
                 </ul>
             </div>
+
             <div class="col-md-4 mb-4">
-                <h3 class="text-uppercase">Ayuda</h3>
+                <h3 class="text-uppercase">Interes</h3>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-white">Mi cuenta</a></li>
-                    <li><a href="#" class="text-white">Pagos y facturas</a></li>
-                    <li><a href="#" class="text-white">Opciones para regalo</a></li>
-                    <li><a href="#" class="text-white">Artículos para tallas</a></li>
-                    <li><a href="#" class="text-white">Formas de pago</a></li>
+                    <li><a href="{{ url('/perfil') }}" class="text-white">Mi cuenta</a></li>
+                    <li><a href="{{ url('/productos') }}" class="text-white">Productos</a></li>
+                    <li><a href="{{ url('/clientes/' . auth()->user()->id . '/pedidos') }}" class="text-white">Pedidos</a></li>
+
+
                 </ul>
             </div>
+            <!-- Sección Políticas -->
             <div class="col-md-4 mb-4">
-                <h3 class="text-uppercase">Políticas</h3>
+                <h3 class="text-uppercase">Información Adicional</h3>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-white">Política de Privacidad</a></li>
-                    <li><a href="#" class="text-white">Condiciones de Compra</a></li>
-                    <li><a href="#" class="text-white">Condiciones de Tarjeta de Regalo</a></li>
-                    <li><a href="#" class="text-white">Botón de Arrepentimiento</a></li>
-                    <li><a href="#" class="text-white">Configuración de Cookies</a></li>
+                   <li><a href="{{ url('/') }}#home" class="text-white">Home</a></li>
+                    <li><a href="condiciones-compra.html" class="text-white">Email</a></li>
+
                 </ul>
             </div>
         </div>
+        <!-- Texto inferior -->
         <div class="text-center mt-3">
-            <p class="mb-0">MarcaDeRopa©2024. Todos los derechos reservados.</p>
+            <p class="mb-0">DolceBanana©2025. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>
