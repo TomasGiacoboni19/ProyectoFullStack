@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\EnsureClientIsAuthenticated;
 use App\Models\Cliente;
 use App\Models\Producto;
 use Illuminate\Http\Request;

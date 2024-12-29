@@ -2,7 +2,8 @@
 
 namespace App\Http;
 
-use App\Http\Middleware\CalcularTotalCarrito;
+use App\Http\Middleware\EnsureClientIsAuthenticated;
+use App\Http\Middleware\EnsurePedidoBelongsToUser;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -37,7 +38,6 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            CalcularTotalCarrito::class,
 
         ],
 
@@ -66,5 +66,7 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'ensureClientIsAuthenticated' => EnsureClientIsAuthenticated::class,
+        'pedido.belongsto.user' => EnsurePedidoBelongsToUser::class,
     ];
 }
