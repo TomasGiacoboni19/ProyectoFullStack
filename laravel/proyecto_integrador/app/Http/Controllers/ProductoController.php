@@ -77,20 +77,29 @@ class ProductoController extends Controller
         $datos = $request->validate([
             "nombre_producto" => ["required"],
             "precio_producto" => ["required"],
-            "stock" => ["required"]
-
+            "stock" => ["required"],
+            "descripcion_producto" => ["required"]
         ], [
             "nombre_producto.required" => "Este campo es obligatorio!",
-            "precio_producto.required" => "Este campo es obligatorio!"
+            "precio_producto.required" => "Este campo es obligatorio!",
+            "stock.required" => "Este campo es obligatorio!",
+            "descripcion_producto.required" => "Este campo es obligatorio!",
         ]);
 
         $producto->nombre_producto = $datos["nombre_producto"];
         $producto->precio_producto = $datos["precio_producto"];
-        $producto->stock_producto += $datos["stock"];
+        $producto->stock_producto = $datos["stock"];
+        $producto->descripcion_producto = $datos["descripcion_producto"];
 
         $producto->save();
 
-        return redirect("/productos/".$producto->id_producto)->with("success", "Se actualizo el producto de forma correcta");
+        return response()->json([
+            'id_producto' => $producto->id_producto,
+            'nombre_producto' => $producto->nombre_producto,
+            'precio_producto' => $producto->precio_producto,
+            'stock' => $producto->stock_producto,
+            'descripcion_producto' => $producto->descripcion_producto
+        ]);
     }
 
     public function destroy(Producto $producto)
@@ -100,6 +109,17 @@ class ProductoController extends Controller
             return redirect()->back()->with('success', 'Se elimino correctamente.');
         } catch (Exception $e) {
             return redirect()->back()->with('failed', $e->getMessage());
+        }
+    }
+
+    public function json($id) {
+        $producto = Producto::where('id_producto', $id)->first();
+        if ($producto) {
+            // Devuelve el producto en formato JSON
+            return response()->json($producto);
+        } else {
+            // Devuelve un error 404 si el producto no existe
+            return response()->json(['error' => 'Producto no encontrado'], 404);
         }
     }
 }

@@ -10,12 +10,14 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/editar_producto.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/productosCliente.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/formularioProducto.css')}}">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <meta name="CSRF-token" content="{{ csrf_token() }}">
     <title>Mis productos</title>
 </head>
 <body>
@@ -34,6 +36,7 @@
     @if($productos->isEmpty())
         <h1>No tenes productos, ¡prueba a agregar alguno!.</h1>
     @else
+        <div id="avisoBueno" class="oculto">¡El producto se modifico correctamente!</div>
         <div class="container">
             <h1>Mis productos</h1>
             <table class="table table-striped table-hover" id="myTable">
@@ -48,7 +51,7 @@
                 </thead>
                 <tbody>
                     @foreach ($productos as $producto)
-                        <tr>
+                        <tr data-id={{$producto->id_producto}}>
                             <td>
                                 @if(empty($producto->foto_producto))
                                     <img class="fotoProd" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Imagen no disponible">
@@ -56,11 +59,11 @@
                                     <img class="fotoProd" src="{{ asset('storage/' . $producto->foto_producto) }}" alt="Foto del producto">
                                 @endif
                             </td>
-                            <td>{{ $producto->nombre_producto }}</td>
-                            <td>{{ $producto->descripcion_producto }}</td>
-                            <td>${{ number_format($producto->precio_producto, 2) }}</td>
+                            <td class="nombre_producto">{{ $producto->nombre_producto }}</td>
+                            <td class="descripcion_producto">{{ $producto->descripcion_producto }}</td>
+                            <td class="precio_producto">${{ number_format($producto->precio_producto, 2) }}</td>
                             <td>
-                                <a href="/productos/{{ $producto->id_producto }}/editar" class="btn btn-sm btn-primary">Editar</a>
+                                <a href="#" data-id="{{ $producto->id_producto }}" class="btn btn-sm btn-primary btn-editar">Editar</a>
                                 <form action="/productos/{{ $producto->id_producto }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
@@ -73,13 +76,15 @@
             </table>
         </div>
         @endif
-    <a href="/productos/crear">
-        <button class="btn btn-sm btn-primary botonAgregar">
-            <i class="bi bi-plus-lg"></i>
-        </button>
-    </a>
+        <a href="/productos/crear">
+            <button class="btn btn-sm btn-primary botonAgregar">
+                <i class="bi bi-plus-lg"></i>
+            </button>
+        </a>
     </div>
+    @include('/productos/formularioEditarProducto')
 @include('footer')
 <script src={{asset("js/tablaProducto.js")}}></script>
+<script src={{asset("js/tablaProducto2.js")}}></script>
 </body>
 </html>
