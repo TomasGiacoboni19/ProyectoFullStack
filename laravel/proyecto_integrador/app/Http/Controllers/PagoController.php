@@ -29,7 +29,6 @@ class PagoController extends Controller
         ];
 
         return view('pedidos.generar_pago', $parametros);
-
     }
 
     public function generarPago(Pedido $pedido, Request $request)
@@ -66,15 +65,10 @@ class PagoController extends Controller
         $paramatros = [
             'destinatario' => $cliente->mail,
             'plantilla' => "emails.compra",
-            'contenido' => ['pedido' => $pedido],
+            'contenido' => ['pedido' => $pedido, 'cliente' => $cliente],
         ];
 
         Gmail::enviar($paramatros);
         return view('pedidos.pago_realizado', [ 'pedido' => $pedido, 'carrito' => $this->carrito()]);
-
     }
-
-
-
-
 }

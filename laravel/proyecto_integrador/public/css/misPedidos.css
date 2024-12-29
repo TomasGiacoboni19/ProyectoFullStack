@@ -5,7 +5,10 @@ body {
     background-size: cover;
 }
 
-/* From Uiverse.io by andrew-demchenk0 */ 
+.descargaPDF {
+  margin-top: 20px;
+}
+
 .button {
     position: relative;
     width: 150px;

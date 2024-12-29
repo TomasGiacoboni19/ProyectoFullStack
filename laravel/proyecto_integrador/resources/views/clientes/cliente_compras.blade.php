@@ -10,6 +10,12 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/editar_producto.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/misPedidos.css')}}">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
     <title>Mis compras</title>
 </head>
 <body>
@@ -21,17 +27,29 @@
         @if($pedidos->isEmpty())
             <p>No tienes compras registradas.</p>
         @else
-            <ul>
-                @foreach($pedidos as $pedido)
-                    <li>
-                        <strong>Fecha del pedido:</strong> {{ $pedido->fecha_pedido }}<br>
-                        <strong>Carrito de compra:</strong> @if($pedido->carritoDisponible) ABIERTO @else CERRADO @endif <br>
-                        <strong>Estado del pedido:</strong> @if(!$pedido->entregado) NO ENTREGADO @else ENTREAGO @endif <br>
-                        <strong>Total:</strong> ${{ number_format($pedido->precio_total, 2) }}
-                        <a href="/pedidos/{{$pedido->id_pedido}}"><p><strong style="color: #18181b"> Ver el pedido </strong></p></a>
-                    </li>
+
+        <table class="table table-striped table-hover" id="myTable">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Carrito</th>
+                    <th scope="col">Pedido</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Ver pedido</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($pedidos as $pedido)
+                    <tr>
+                        <td> {{ $pedido->fecha_pedido }} </td>
+                        <td> @if($pedido->carritoDisponible) ABIERTO @else CERRADO @endif </td>
+                        <td> @if(!$pedido->entregado) NO ENTREGADO @else ENTREAGO @endif </td>
+                        <td> ${{ number_format($pedido->precio_total, 2) }} </td>
+                        <td> <a href="/pedidos/{{$pedido->id_pedido}}"><p><strong> Ver el pedido </strong></p></a> </td>
+                    </tr>
                 @endforeach
-            </ul>
+            </tbody>
+        </table>
         @endif
             <a href="{{ route('pedidos.exportar') }}">
                 <div class="descargaPDF">
@@ -43,7 +61,7 @@
             </a>
     </div>
 </section>
-
+<script src={{asset("js/tablaPedidos.js")}}></script>
 @include('footer')
 </body>
 </html>
