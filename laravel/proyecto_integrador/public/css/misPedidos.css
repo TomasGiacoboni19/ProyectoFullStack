@@ -1,0 +1,66 @@
+body {
+    background-color: #535353;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.12'%3E%3Cpolygon fill='%23626262' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23727272' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23818181' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23919191' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23a0a0a0' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23b0b0b0' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23BFBFBF' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* From Uiverse.io by andrew-demchenk0 */ 
+.button {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #17795E;
+    background-color: #209978;
+    overflow: hidden;
+  }
+  
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(22px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #17795E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button .svg {
+    width: 20px;
+    fill: #fff;
+  }
+  
+  .button:hover {
+    background: #17795E;
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button:active .button__icon {
+    background-color: #146c54;
+  }
+  
+  .button:active {
+    border: 1px solid #146c54;
+  }

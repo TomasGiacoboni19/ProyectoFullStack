@@ -9,32 +9,65 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/editar_producto.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/perfilUsuario.css')}}">
     <title>Mi perfil</title>
 </head>
 <body>
 @include('header', ['carrito' => $carrito])
 
 <section id="mi-perfil">
-    <h2 class="section-title">Mi Perfil</h2>
     <div class="perfil-info">
         <h3>Información Personal</h3>
-        <label for="nombre"> Nombre: {{$cliente->nombre}} </label>
+        <hr>
+        
+        <div class="align-items-center container">
+            <div class="row">
+                <img src="/fotos/iconoPerfil.png" alt="" class="col-4 iconoPerfil">
+                <div id="infoPersonal" class="col-8">
+                    <label for="nombre"> Nombre: {{$cliente->nombre}} </label>
+    
+                    <label for="apellido">Apellido: {{$cliente->apellido}}</label>
+    
+                    <label for="email">Email: {{$cliente->mail}}</label>
+    
+                    <label for="usuario">Usuario: {{$cliente->usuario}}</label>
+                </div>
+            </div>
+        </div>
 
-        <label for="apellido">Apellido: {{$cliente->apellido}}</label>
-
-        <label for="email">Email: {{$cliente->mail}}</label>
-
-        <label for="usuario">Usuario: {{$cliente->usuario}}</label>
-
-        <br>
-        <a href="/clientes/{{ $cliente->id_cliente }}/productos" style="color: black;">Ver mis productos</a>
-        <br>
-        <a href="/clientes/{{ $cliente->id_cliente }}/pedidos" style="color: black;">Ver mis pedidos</a>
-        <br>
-        <a href="/clientes/{{ $cliente->id_cliente }}/editar" style="color: black;">Editar mi perfil</a>
-
-
+        <div class="section-title">
+            <span>opciones</span>
+        </div>
+            
+        <div class="container listaOpciones">
+            <div class="row filaOpcion">
+                <div class="col-4 imagenOpcion">
+                    <img src="/fotos/editarProducto.png" alt="Editar productos" class="fotoColumna">
+                </div>
+                <div class="col-8 opcion">
+                    <a href="/clientes/{{ $cliente->id_cliente }}/productos">Ver mis productos</a>
+                </div>
+            </div>
+            <div class="row filaOpcion">
+                <div class="col-8 opcion">
+                    <a href="/clientes/{{ $cliente->id_cliente }}/pedidos">Ver mis pedidos</a>
+                </div>
+                <div class="col-4 imagenOpcion">
+                    <img src="/fotos/verPedidos.png" alt="Editar productos" class="fotoColumna">
+                </div>
+            </div>
+            <div class="row filaOpcion">
+                <div class="col-4 imagenOpcion">
+                    <img src="/fotos/editarPerfil.png" alt="Editar productos" class="fotoColumna">
+                </div>
+                <div class="col-8 opcion">
+                    <a href="/clientes/{{ $cliente->id_cliente }}/editar">Editar mi perfil</a>
+                </div>
+            </div>
+        </div>
+            
+            
+            
     </div>
 </section>
 @include('footer')

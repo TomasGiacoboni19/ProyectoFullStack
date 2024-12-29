@@ -3,6 +3,10 @@
     margin-bottom: 30px;
 }
 
+.fotoCarritoVacio {
+  object-fit: cover;
+}
+
 .producto-item {
     align-items: center;
 }

@@ -6,6 +6,11 @@ footer {
     position: relative; /* Asegúrate de que no esté fijo */
     width: 100%; /* Asegúrate de que ocupe todo el ancho */
     padding: 20px 0; /* Espaciado interno */
+    margin-top: 20px;
+}
+
+.row {
+    margin-bottom: auto; /*Hace que el footer quede abajo si los elementos no ""completan"" la pantalla*/
 }
 
 footer h3 {

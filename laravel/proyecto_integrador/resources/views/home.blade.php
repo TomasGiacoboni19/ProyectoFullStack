@@ -37,11 +37,7 @@
         @include('nosotros')
 </section>
 
-
-
 @include('footer')
-
-
 
 </body>
 </html>

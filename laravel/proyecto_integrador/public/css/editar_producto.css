@@ -5,21 +5,6 @@ body {
     background-color: #f4f4f9;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #444;
-    padding: 0.5rem 0;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-}
-
 main {
     padding: 2rem;
     text-align: center;
@@ -61,16 +46,6 @@ main {
     background-color: #555;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 0.3rem;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.8rem;
-}
-
 .compras-list {
     text-align: left;
     max-width: 600px;
@@ -78,7 +53,7 @@ footer {
     padding: 1rem;
     background: #fff;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .perfil-info, .producto-form, .carrito-list {
@@ -158,4 +133,10 @@ footer {
 
 #contenedorProductos {
     position: relative;
+}
+
+.descargaPDF {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

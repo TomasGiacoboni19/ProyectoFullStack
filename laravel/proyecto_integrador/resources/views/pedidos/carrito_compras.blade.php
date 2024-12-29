@@ -26,7 +26,7 @@
             @endif
         </h2>
         <hr>
-
+        {{-- @if(count($pedido->item) === 0) No funciona ni con el isEmpty() al parecer siempre esta vacio no se que le pasa --}}
         <p><strong>Cliente:</strong> {{ $pedido->cliente->nombre }} {{ $pedido->cliente->apellido }}</p>
         <p><strong>Total de productos:</strong> {{ $pedido->item->count() }}</p>
         <p><strong>Fecha del pedido: </strong> {{ $pedido->fecha_pedido }}</p>
@@ -54,8 +54,6 @@
             <div>Total:</div>
             <div> $ {{ $pedido->precio_total }} </div>
         </div>
-
-        
 
         <!-- Acciones según el estado del pedido -->
         @if($pedido->carritoDisponible)
@@ -95,6 +93,18 @@
             <p class="section-title">Estado Actual</p>
             <p>Entregado</p>
         @endif
+        {{-- @else
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <img class="fotoCarritoVacio" src="{{ asset('fotos/carritoVacio.png')}}" alt="carrito vacio">
+                </div>
+                <div>
+                    <p>No tenes productos en tu carrito</p>
+                </div>
+            </div>
+        </div>
+        @endif --}}
     </div>
 </section>
 @include('footer')

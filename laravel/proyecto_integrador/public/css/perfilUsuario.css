@@ -1,0 +1,68 @@
+body {
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%23000000' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23110a00' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%23171200' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%231b1700' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%231f1c00' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23232100' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.iconoPerfil {
+    font-size: 120px;
+    text-align: center;
+}
+
+#infoPersonal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.perfil-info {
+    border-radius: 25px;
+}
+
+.fotoColumna {
+    width: 100px;
+}
+
+.imagenOpcion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opcion {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.section-title::before,
+.section-title::after{
+    content: "";
+    flex: 1;
+    height:2px;
+    background-color:black;
+}
+.section-title span{
+    text-transform: uppercase;
+}
+
+.filaOpcion {
+    border: whitesmoke solid 2px;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    padding: 20px 0px;
+    margin-bottom: 10px;
+}
+
+.iconoPerfil {
+    filter: drop-shadow(5px 5px 5px black);
+}

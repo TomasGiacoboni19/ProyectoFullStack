@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/editar_producto.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/productosCliente.css')}}">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
@@ -33,8 +34,8 @@
     @if($productos->isEmpty())
         <h1>No tenes productos, ¡prueba a agregar alguno!.</h1>
     @else
-        <h1>Mis productos</h1>
         <div class="container">
+            <h1>Mis productos</h1>
             <table class="table table-striped table-hover" id="myTable">
                 <thead class="table-dark">
                     <tr>
