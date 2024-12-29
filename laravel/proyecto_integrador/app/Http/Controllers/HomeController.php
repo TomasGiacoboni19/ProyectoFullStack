@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
+use App\Models\Producto;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,4 +15,11 @@ class HomeController extends Controller
     {
         return view('locales');
     }
+
+    public function home()
+    {
+        $parametros=['productos' => Producto::take(3)->get(),'categorias'=>categoria::all(),'carrito' => $this->carrito()];
+        return view('home', $parametros);
+    }
+
 }

@@ -59,16 +59,12 @@ class Pedido extends Model
     }
 
 
-    public function cerrarPedido()
-    {
-        $this->update(['carritoDisponible' => 0]);
-    }
+
 
     public function modificarPrecio(Float $precio){
         $this->precio_total += $precio;
         $this->save();
     }
-
 
 
     public function actualizarPedido(array $parametros)
