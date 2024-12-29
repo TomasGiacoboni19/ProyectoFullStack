@@ -27,7 +27,7 @@
     </div>
     <div class="row Taller mt-5">
         <div class="col-6">
-            <img class="img-fluid ImagenesHistoria" src="fotos/Taller" alt="">
+            <img class="img-fluid ImagenesHistoria" src="fotos/taller.webp" alt="">
         </div>
         <div class="col-6 textoTaller">
             <p>
