@@ -32,8 +32,10 @@
             </div>
         @endif
     @if($productos->isEmpty())
-        <h1>No tenes productos, ¡prueba a agregar alguno!.</h1>
-    @else
+        <div class="container d-flex justify-content-center align-items-center mt-5 min-vh-100 ">
+                <span class="text">No tenes productos!</span>
+        </div>
+            @else
         <div class="container">
             <h1>Mis productos</h1>
             <table class="table table-striped table-hover" id="myTable">

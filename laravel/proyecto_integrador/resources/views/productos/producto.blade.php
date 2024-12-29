@@ -38,10 +38,10 @@
 
     <div class="carta">
         <div class="row">
-            <div class="col">
+            <div class=" col-xxl-6 col-xl-6  col-lg-6 col-md-6 col-sm-12 ">
                 <div class="carta-img"><div class="img"></div> <img src="{{asset('storage/'.$producto->foto_producto)}}" alt=""></div>
             </div>
-            <div class="col">
+            <div class=" col-xxl-6 col-xl-6  col-lg-6 col-md-6 col-sm-12">
                 <div class="carta-title">{{$producto->nombre_producto}}</div>
                 <div class="carta-subtitle descripcion mt-3">{{$producto->descripcion_producto}}</div>
                 <div class="Selector">
