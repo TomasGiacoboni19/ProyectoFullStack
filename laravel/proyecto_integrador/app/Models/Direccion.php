@@ -21,4 +21,20 @@ class Direccion extends Model
     {
         return $this->belongsTo(Cliente::class, 'cliente_id');
     }
+
+    public static function obtenerDireccion(array $datos)
+    {
+        if ($datos['favoritos'] != '0') {
+            return self::find($datos['favoritos']);
+        } else {
+            $parametros = [
+                'nombre' => $datos['direccion'],
+                'numero' => $datos['numero'],
+                'localizacion_id' => $datos['localizacion'],
+                'cliente_id' => auth()->id(),
+            ];
+            return self::create($parametros);
+        }
+    }
+
 }

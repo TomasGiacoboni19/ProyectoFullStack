@@ -13,11 +13,6 @@ class CategoriasController extends Controller
     }
 
 
-    public function home()
-    {
-        $parametros=['productos' => Producto::take(3)->get(),'categorias'=>categoria::all(),'carrito' => $this->carrito()];
-        return view('home', $parametros);
-    }
 
     public function show(Categoria $categoria)
     {

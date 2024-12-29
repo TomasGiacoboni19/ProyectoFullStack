@@ -40,10 +40,10 @@ class ClienteController extends Controller
         $paramatros = [
             'destinatario' => $datos['mail'],
             'plantilla' => "emails.bienvenida",
-            'contenido' => $datos,
+            'contenido' => ['datos'=>$datos],
         ];
 
-    //    Gmail::enviar($paramatros);
+        Gmail::enviar($paramatros);
         return response()->redirectTo("/login")->with("success", "Usuario creado con exito");
 
     }
@@ -79,13 +79,6 @@ class ClienteController extends Controller
         return response()->redirectTo("/");
     }
 
-    //Revisar, agregado por Tomi el Sábado
-    public function perfil()
-    {
-        $cliente = auth()->user(); // Obtener el cliente autenticado
-        $carrito = session()->get('carrito', []); // Obtener el carrito desde la sesión (o ajustarlo según tu lógica)
 
-        return view('clientes.cliente_perfil', compact('cliente', 'carrito'));
-    }
 
 }

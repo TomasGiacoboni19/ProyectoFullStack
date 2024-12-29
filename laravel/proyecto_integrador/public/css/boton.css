@@ -1,0 +1,71 @@
+/* styles.css */
+
+/* Estilo para el botón "Volver Arriba" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px; /* Tamaño cuadrado */
+    height: 50px; /* Tamaño cuadrado */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del icono */
+    border-radius: 5px; /* Bordes redondeados para un aspecto más suave */
+    display: none; /* Inicialmente oculto */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px; /* Tamaño del icono */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar el botón */
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+.back-to-top:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */
+    cursor: pointer; /* Mostrar puntero */
+}
+
+/* Animación para el icono */
+.back-to-top i {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.back-to-top:hover i {
+    transform: scale(1.1); /* Efecto de agrandado del icono al pasar el mouse */
+}
+
+/* boton-atras.css */
+
+/* Estilo para el botón "Volver Atrás" */
+.history-back {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px; /* Tamaño cuadrado */
+    height: 50px; /* Tamaño cuadrado */
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del icono */
+    border-radius: 5px; /* Bordes redondeados */
+    display: none; /* Inicialmente oculto */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px; /* Tamaño del icono */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.history-back:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */
+    cursor: pointer; /* Mostrar puntero */
+}
+
+/* Animación para el icono */
+.history-back i {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.history-back:hover i {
+    transform: scale(1.1); /* Efecto de agrandado */
+}

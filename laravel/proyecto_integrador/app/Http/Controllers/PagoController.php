@@ -42,18 +42,7 @@ class PagoController extends Controller
             'localizacion' => 'nullable|exists:localizacion,id_localizacion',
         ]);
 
-        if ($datos['favoritos'] != '0') {
-            $direccion = Direccion::find($datos['favoritos']);
-        } else {
-            $parametros = [
-                'nombre' => $datos['direccion'],
-                'numero' => $datos['numero'],
-                'localizacion_id' => $datos['localizacion'],
-                'cliente_id' => auth()->id(),
-            ];
-
-           $direccion = Direccion::create($parametros);
-        }
+        $direccion = Direccion::obtenerDireccion($datos);
 
         $pedido->direccion_entrega_id = $direccion->id_direccion;
         $pedido->medio_pago_id = $datos['metodo'];
@@ -67,8 +56,8 @@ class PagoController extends Controller
             'plantilla' => "emails.compra",
             'contenido' => ['pedido' => $pedido, 'cliente' => $cliente],
         ];
-
         Gmail::enviar($paramatros);
+
         return view('pedidos.pago_realizado', [ 'pedido' => $pedido, 'carrito' => $this->carrito()]);
     }
 }

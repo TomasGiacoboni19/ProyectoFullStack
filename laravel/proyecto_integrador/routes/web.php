@@ -13,7 +13,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\CategoriasController;
 
 
-Route::get('/',[CategoriasController::class,'home']);
+Route::get('/',[HomeController::class,'home']);
 
 Route::get('/productos/{producto}/editar', [ProductoController::class, 'edit'])->middleware(['auth', EnsureProductoBelongsToUser::class]);
 Route::put('/productos/{producto}', [ProductoController::class, 'update']);
@@ -53,10 +53,4 @@ Route::get('/locales',[HomeController::class,'locales']);
 Route::get('/historia',[HomeController::class,'historia']);
 Route::get('/categorias',[HomeController::class,'categorias']);
 Route::get('/productos-destacados',[HomeController::class,'productos-destacados']);
-
-
-Route::middleware(['auth'])->group(function () {
-    Route::get('/perfil', [ClienteController::class, 'perfil'])->name('perfil');});
-
-
 

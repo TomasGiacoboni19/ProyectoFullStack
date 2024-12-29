@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af122576-25b3-4e7f-ad8d-13670eb1eadb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/fotos/taller.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="3f954448-7bb5-4cb8-8389-7e88d45888bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/components/jquery/jquery-migrate.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/components/jquery/jquery-migrate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/components/jquery/jquery-migrate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/components/jquery/jquery-migrate.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/perfilUsuario.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/perfilUsuario.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/historia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/historia.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/productosCliente.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/public/css/productosCliente.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/producto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/producto.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/productos_cliente.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/productos_cliente.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable path="composer" />
-    </execution>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,55 +30,27 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="2qS1q5qZRgxlZhintXeWtYSZj6D" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2quDytZImDXwUBNO5VnQemrgfb0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "PHPUnit.database.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/xampp/htdocs/Dolce/ProyectoFullStack",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Dolce&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ProyectoFinal\laravel\proyecto_integrador\public\fotos" />
-      <recent name="C:\xampp\htdocs\CursoWeb\ProyectoFullStack\laravel\proyecto_integrador\resources\js" />
-      <recent name="C:\xampp\htdocs\CursoWeb\ProyectoFullStack\laravel\proyecto_integrador\resources\css" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="database" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner directory="$PROJECT_DIR$/laravel/proyecto_integrador/database" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHPUnit.database" />
-      </list>
-    </recent_temporary>
-  </component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -96,29 +62,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="af122576-25b3-4e7f-ad8d-13670eb1eadb" name="Changes" comment="" />
-      <created>1734641349240</created>
+      <changelist id="3f954448-7bb5-4cb8-8389-7e88d45888bb" name="Changes" comment="" />
+      <created>1735503824135</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1734641349240</updated>
-      <workItem from="1734641350272" duration="7597000" />
-      <workItem from="1734649054540" duration="2329000" />
-      <workItem from="1734703723525" duration="2891000" />
-      <workItem from="1734972306067" duration="53000" />
-      <workItem from="1734972366298" duration="52000" />
-      <workItem from="1734972425407" duration="47000" />
-      <workItem from="1734972762573" duration="2128000" />
-      <workItem from="1734975834930" duration="6000" />
-      <workItem from="1734975846875" duration="11628000" />
-      <workItem from="1735324258632" duration="1228000" />
-      <workItem from="1735329146356" duration="213000" />
-      <workItem from="1735329719621" duration="8641000" />
-      <workItem from="1735395589604" duration="11213000" />
-      <workItem from="1735416462871" duration="432000" />
-      <workItem from="1735416901713" duration="48000" />
-      <workItem from="1735416951634" duration="238000" />
-      <workItem from="1735417202468" duration="10844000" />
-      <workItem from="1735489578320" duration="1567000" />
+      <updated>1735503824135</updated>
+      <workItem from="1735503825147" duration="1614000" />
+      <workItem from="1735505562758" duration="140000" />
+      <workItem from="1735505810734" duration="4340000" />
     </task>
     <servers />
   </component>
@@ -129,14 +80,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/locales.blade.php</url>
-          <line>58</line>
+          <url>file://$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/producto.blade.php</url>
+          <line>32</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/slider.blade.php</url>
-          <line>30</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
