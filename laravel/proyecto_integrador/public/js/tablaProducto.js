@@ -9,7 +9,6 @@ $(document).ready( function () {
                 target: 0,
                 className: "d-flex justify-content-center",
             },
-            
         ],
         language: {
                 "aria": {

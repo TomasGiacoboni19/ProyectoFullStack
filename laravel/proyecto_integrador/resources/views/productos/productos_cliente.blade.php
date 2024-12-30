@@ -47,6 +47,7 @@
                         <th scope="col">Nombre</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Precio</th>
+                        <th scope="col">Stock</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
@@ -55,14 +56,15 @@
                         <tr data-id={{$producto->id_producto}}>
                             <td>
                                 @if(empty($producto->foto_producto))
-                                    <img class="fotoProd" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Imagen no disponible">
+                                    <a href="/productos/{{$producto->id_producto}}"><img class="fotoProd" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Imagen no disponible"></a>
                                 @else
-                                    <img class="fotoProd" src="{{ asset('storage/' . $producto->foto_producto) }}" alt="Foto del producto">
+                                    <a href="/productos/{{$producto->id_producto}}"><img class="fotoProd" src="{{ asset('storage/' . $producto->foto_producto) }}" alt="Foto del producto"></a>
                                 @endif
                             </td>
                             <td class="nombre_producto">{{ $producto->nombre_producto }}</td>
                             <td class="descripcion_producto">{{ $producto->descripcion_producto }}</td>
                             <td class="precio_producto">${{ number_format($producto->precio_producto, 2) }}</td>
+                            <td class="stock_producto">{{ $producto->stock_producto }}</td>
                             <td>
                                 <a href="#" data-id="{{ $producto->id_producto }}" class="btn btn-sm btn-primary btn-editar">Editar</a>
                                 <form action="/productos/{{ $producto->id_producto }}" method="POST" class="d-inline">

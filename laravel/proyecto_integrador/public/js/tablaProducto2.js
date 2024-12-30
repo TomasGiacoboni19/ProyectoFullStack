@@ -62,8 +62,8 @@ $("#formularioEditar").submit((event) => {
                 .end()
                 .find(".precio_producto").text(precioFormateado)
                 .end()
-                // .find(".stock_producto").text(response.stock)
-                // .end()
+                .find(".stock_producto").text(response.stock)
+                .end()
                 .find(".descripcion_producto").text(response.descripcion_producto);
             
             // Mostrar mensaje de éxito
@@ -76,3 +76,7 @@ $("#formularioEditar").submit((event) => {
         }
     });
 });
+
+$('.botonCerrar').on('click', () => {
+    $('#editFormContainer').hide();
+})
