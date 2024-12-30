@@ -15,7 +15,7 @@ class ProductoController extends Controller
 
     public function index()
     {
-        $paramatros = ['productos' => Producto::all(), 'carrito' => $this->carrito()];
+        $paramatros = ['productos' => Producto::getActivos(), 'carrito' => $this->carrito()];
 
         return view('productos.productos', $paramatros); //Le mando todos los productos
     }
@@ -42,7 +42,7 @@ class ProductoController extends Controller
             "precio_producto.required" => "¡Precio del producto es obligatorio!",
             "categoria.required" => "¡Categoría del producto es obligatorio!",
             "foto.required" => "¡Foto del producto es obligatorio!",
-            "descripcion_producto.required" => "¡Descripción del producto es obligatoria!" 
+            "descripcion_producto.required" => "¡Descripción del producto es obligatoria!"
         ]);
 
         // Primero tengo que guardar la imagen
@@ -85,15 +85,15 @@ class ProductoController extends Controller
         if (isset($datos["nombre_producto"])) {
             $producto->nombre_producto = $datos["nombre_producto"];
         }
-    
+
         if (isset($datos["precio_producto"])) {
             $producto->precio_producto = $datos["precio_producto"];
         }
-    
+
         if (isset($datos["stock"])) {
             $producto->stock_producto = $datos["stock"];
         }
-    
+
         if (isset($datos["descripcion_producto"])) {
             $producto->descripcion_producto = $datos["descripcion_producto"];
         }

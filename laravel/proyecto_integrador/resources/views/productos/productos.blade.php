@@ -23,7 +23,6 @@
 </div>
 <div class="row">
     @foreach($productos as $producto)
-        @if($producto->estado == "Disponible")
         <div class="col-lg-3 col-xl-3 col-md-3 col-sm-4 d-flex justify-content-center mt-5">
             <section class="wow animate__fadeIn " data-wow-duration="2s" data-wow-delay ="0.3s">
             <div class="carta ">
@@ -40,7 +39,6 @@
             </div>
             </section>
         </div>
-        @endif
     @endforeach
 </div>
 </body>

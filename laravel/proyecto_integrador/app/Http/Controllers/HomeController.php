@@ -18,7 +18,7 @@ class HomeController extends Controller
 
     public function home()
     {
-        $parametros=['productos' => Producto::take(3)->get(),'categorias'=>categoria::all(),'carrito' => $this->carrito()];
+        $parametros=['productos' => Producto::getCategorias(4),'categorias'=>categoria::all(),'carrito' => $this->carrito()];
         return view('home', $parametros);
     }
 

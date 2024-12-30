@@ -41,6 +41,7 @@ class Producto extends Model
     public static function getActivos(){
         return self::where('estado', 'Disponible')->get();
     }
-
-
+    public static function getCategorias(int $cantidad) {
+        return self::where('estado', 'Disponible')->take($cantidad)->get();
+    }
 }
