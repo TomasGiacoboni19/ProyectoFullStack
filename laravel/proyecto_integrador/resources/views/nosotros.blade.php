@@ -21,7 +21,7 @@
                 <div class="card">
                     <div class="card-info">
                         <div class="card-avatar"></div>
-                        <div class="card-title">Lucas Iturroz</div>
+                        <div class="card-title">Lucas Iturrioz</div>
                         <div class="card-subtitle">Desarrollo Web</div>
                     </div>
                     <ul class="card-social">
