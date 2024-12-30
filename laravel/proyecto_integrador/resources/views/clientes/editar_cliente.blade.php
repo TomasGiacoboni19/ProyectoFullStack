@@ -24,19 +24,19 @@
         @csrf
         @method('PUT')
         <div class="mb-3">
-            <label for="nombre" class="form-label" style="color:white;">Nombre</label>
+            <label for="nombre" class="form-label">Nombre</label>
             <input type="text" name="nombre" id="nombre" class="form-control" value="{{ $cliente->nombre }}" >
         </div>
         <div class="mb-3">
-            <label for="apellido" class="form-label" style="color:white;">Apellido</label>
+            <label for="apellido" class="form-label">Apellido</label>
             <input type="text" name="apellido" id="apellido" class="form-control" value="{{ $cliente->apellido }}" >
         </div>
         <div class="mb-3">
-            <label for="email" class="form-label" style="color:white;">Email</label>
+            <label for="email" class="form-label">Email</label>
             <input type="email" name="email" id="email" class="form-control" value="{{ $cliente->mail }}" >
         </div>
         <div class="mb-3">
-            <label for="usuario" class="form-label" style="color:white;">Usuario</label>
+            <label for="usuario" class="form-label">Usuario</label>
             <input type="text" name="usuario" id="usuario" class="form-control" value="{{ $cliente->usuario }}">
         </div>
         <button type="submit" class="btn btn-primary">Guardar Cambios</button>
