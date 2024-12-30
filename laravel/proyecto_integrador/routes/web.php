@@ -21,7 +21,8 @@ Route::get('/productos/crear', [ProductoController::class, 'create'])->middlewar
 Route::post('/productos/crear', [ProductoController::class, 'store']);
 Route::get('/productos', [ProductoController::class, 'index']);
 Route::get('/productos/{producto}', [ProductoController::class, 'show'])->middleware('auth');
-Route::delete('/productos/{producto}', [ProductoController::class, 'destroy']);
+Route::delete('/productos/{producto}/eliminar', [ProductoController::class, 'destroy'])->name('productos.destroy');
+Route::put('/productos/{producto}/recuperar', [ProductoController::class, 'restore'])->name('productos.restore');
 Route::get('/productos/{id}/json', [ProductoController::class, 'json']);
 
 Route::get('/clientes/registro', [ClienteController::class, 'create']);

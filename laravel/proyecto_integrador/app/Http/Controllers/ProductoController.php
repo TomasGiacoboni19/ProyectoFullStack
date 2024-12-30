@@ -50,6 +50,7 @@ class ProductoController extends Controller
         $pathFoto = $request->file('foto_producto')->store('fotos', 'public');
 
         $datos['foto_producto'] = $pathFoto;
+        $datos['estado'] = 'Disponible';
 
         Producto::create($datos);
 
@@ -116,6 +117,13 @@ class ProductoController extends Controller
         } catch (Exception $e) {
             return redirect()->back()->with('failed', $e->getMessage());
         }
+    }
+
+    public function restore(Producto $producto)
+    {
+        $producto->estado = "Disponible";
+        $producto->save();
+        return redirect()->back()->with('success', 'Producto recuperado!');
     }
 
     public function json($id) {
