@@ -71,3 +71,19 @@ body {
     text-decoration: none;
     color: black;
 }
+
+#editar-perfil {
+    background-color: whitesmoke;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagenPequenia {
+    width: 50px;
+}
