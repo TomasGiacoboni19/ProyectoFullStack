@@ -67,3 +67,7 @@ body {
   .button:active {
     border: 1px solid #146c54;
   }
+
+  .volver {
+    text-align: start;
+  }

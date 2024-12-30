@@ -52,10 +52,13 @@
                 Ingresar
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"></path><path d="m13 17 5-5-5-5"></path></svg>
             </button>
-            <p>¿No tenés una cuenta?</p>
+            <p>¿No tenes cuenta?</p>
             <button class="oauthButton" id="botonRegistro">
                 Crear una cuenta
             </button>
+                <p>
+                    <span><a href="javascript:history.back()">Volver</a></span>
+                </p>
         </form>
         <form action="/clientes/registro" method="post" class="form oculto" id="formRegistro">
             @csrf
@@ -67,15 +70,15 @@
                 <span><i class="bi bi-box-arrow-in-right"></i></span>
                 <div></div>
             </div>
-            <label for="nombre" class="form-label"></label>
+            <label for="nombre" class="form-label oculto"></label>
             <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresa tu nombre" required autocomplete="off">
-            <label for="apellido" class="form-label"></label>
+            <label for="apellido" class="form-label oculto"></label>
             <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Ingresa tu apellido" required autocomplete="off">
-            <label for="usuario" class="form-label"></label>
+            <label for="usuario" class="form-label oculto"></label>
             <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Ingresa tu nombre de usuario" required autocomplete="off">
-            <label for="email" class="form-label"></label>
+            <label for="email" class="form-label oculto"></label>
             <input type="email" id="email" name="mail" class="form-control" placeholder="Ingresa tu correo electrónico" required autocomplete="off">
-            <label for="password" class="form-label"></label>
+            <label for="password" class="form-label oculto"></label>
             <input type="password" id="password" name="password" class="form-control" placeholder="Ingresa una contraseña" required autocomplete="off">
             <button class="oauthButton" type="submit">
                 Registrarse
@@ -85,6 +88,9 @@
             <button class="oauthButton" id="botonLogin">
                 Ingresar con una cuenta
             </button>
+            <p>
+                <span><a href="javascript:history.back()">Volver</a></span>
+            </p>
         </form>
     </div>
 </div>

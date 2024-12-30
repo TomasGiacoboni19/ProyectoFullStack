@@ -16,12 +16,13 @@ use App\Http\Controllers\CategoriasController;
 Route::get('/',[HomeController::class,'home']);
 
 Route::get('/productos/{producto}/editar', [ProductoController::class, 'edit'])->middleware(['auth', EnsureProductoBelongsToUser::class]);
-Route::put('/productos/{producto}/editar', [ProductoController::class, 'update']);
+Route::put('/productos/{producto}', [ProductoController::class, 'update']);
 Route::get('/productos/crear', [ProductoController::class, 'create'])->middleware('auth');
 Route::post('/productos/crear', [ProductoController::class, 'store']);
 Route::get('/productos', [ProductoController::class, 'index']);
 Route::get('/productos/{producto}', [ProductoController::class, 'show'])->middleware('auth');
 Route::delete('/productos/{producto}', [ProductoController::class, 'destroy']);
+Route::get('/productos/{id}/json', [ProductoController::class, 'json']);
 
 Route::get('/clientes/registro', [ClienteController::class, 'create']);
 Route::post('/clientes/registro', [ClienteController::class, 'store']);

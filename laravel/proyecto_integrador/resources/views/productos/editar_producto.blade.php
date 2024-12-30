@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/editar_producto.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
-
     <title>Editar producto</title>
 </head>
 <body>

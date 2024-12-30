@@ -1,0 +1,14 @@
+.oculto {
+    display: none;
+}
+
+.titulos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulos img {
+    width: 30px;
+    height: 30px;
+}
+
