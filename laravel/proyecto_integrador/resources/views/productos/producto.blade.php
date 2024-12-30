@@ -35,10 +35,10 @@
                         </div>
                     </div>
                     <div class="opciones2">
-                        <div class="carta-secondTitle mt-3"><span>Costo unitario: $</span> {{$producto->precio_producto}}</div>
+                        <div class="carta-secondTitle"><span>Costo unitario: $</span> {{$producto->precio_producto}}</div>
                         <div id="total" class="mt-3">
                             <p class="carta-secondTitle">TOTAL: </p>
-                            <p id="total_precio" class="carta-secondTitle">$0.00</p> <!-- Agrega un ID para el total -->
+                            <p id="total_precio" class="carta-secondTitle">$0.00</p>
                         </div> 
                     </div>  
                 </div>
