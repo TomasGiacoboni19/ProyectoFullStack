@@ -18,6 +18,8 @@
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
     <meta name="CSRF-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>  <!--Efectos WOW -->
+
     <title>Mis productos</title>
 </head>
 <body>
@@ -67,11 +69,19 @@
                             <td class="stock_producto">{{ $producto->stock_producto }}</td>
                             <td>
                                 <a href="#" data-id="{{ $producto->id_producto }}" class="btn btn-sm btn-primary btn-editar">Editar</a>
-                                <form action="/productos/{{ $producto->id_producto }}" method="POST" class="d-inline">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                                </form>
+                            @if($producto->estado == 'Disponible')
+                                <form action="{{ route('productos.destroy', $producto->id_producto) }}" method="POST" class="d-inline">
+                                     @csrf
+                                     @method('DELETE')
+                                     <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                                   </form>
+                                @else
+                                 <form action="{{ route('productos.restore', $producto->id_producto) }}" method="POST" class="d-inline">
+                                      @csrf
+                                      @method('PUT')
+                                      <button type="submit" class="btn btn-sm btn-success">Recuperar</button>
+                                    </form>
+                                @endif
                             </td>
                         </tr>
                     @endforeach
@@ -85,9 +95,17 @@
             </button>
         </a>
     </div>
+
+<section id="test" class="wow animate__fadeInDown" data-wow-duration="2s" data-wow-delay ="1.5s">
     @include('/productos/formularioEditarProducto')
+</section>
+
 @include('footer')
 <script src={{asset("js/tablaProducto.js")}}></script>
 <script src={{asset("js/tablaProducto2.js")}}></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>   <!--Efectos WOW -->
+<script src="{{asset('js/wow.js')}}"></script>   <!--Efectos WOW -->
+
+
 </body>
 </html>

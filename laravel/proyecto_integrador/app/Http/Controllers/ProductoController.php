@@ -110,6 +110,13 @@ class ProductoController extends Controller
 
     }
 
+    public function restore(Producto $producto)
+    {
+        $producto->estado = "Disponible";
+        $producto->save();
+        return redirect()->back()->with('success', 'Producto recuperado!');
+    }
+
     public function json($id) {
         $producto = Producto::where('id_producto', $id)->first();
         if ($producto) {

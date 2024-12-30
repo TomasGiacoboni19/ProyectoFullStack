@@ -132,5 +132,6 @@
     <orderEntry type="library" name="bootstrap-icons" level="application" />
     <orderEntry type="library" name="animate.css" level="application" />
     <orderEntry type="library" name="wow" level="application" />
+    <orderEntry type="library" name="jquery.dataTables" level="application" />
   </component>
 </module>
