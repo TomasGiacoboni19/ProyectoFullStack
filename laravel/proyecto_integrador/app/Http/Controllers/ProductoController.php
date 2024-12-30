@@ -111,12 +111,9 @@ class ProductoController extends Controller
 
     public function destroy(Producto $producto)
     {
-        try {
-            $producto->delete();
-            return redirect()->back()->with('success', 'Se elimino correctamente.');
-        } catch (Exception $e) {
-            return redirect()->back()->with('failed', $e->getMessage());
-        }
+        $producto->estado = "No disponible";
+        $producto->save();
+        return redirect()->back()->with('success', 'Producto Dado de baja correctamente!');
     }
 
     public function restore(Producto $producto)

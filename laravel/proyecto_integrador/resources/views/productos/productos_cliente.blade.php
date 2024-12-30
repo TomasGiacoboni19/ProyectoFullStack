@@ -108,7 +108,5 @@
 <script src={{asset("js/tablaProducto2.js")}}></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>   <!--Efectos WOW -->
 <script src="{{asset('js/wow.js')}}"></script>   <!--Efectos WOW -->
-
-
 </body>
 </html>

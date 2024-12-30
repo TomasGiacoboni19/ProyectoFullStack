@@ -32,9 +32,8 @@ class PedidoController extends Controller
             'total' => $datos['cantidad'] * $producto->precio_producto
         ];
 
-        $pedido->actualizarPedido($paramatros);
         $producto->modificarStock(-$paramatros['cantidad']);
-
+        $pedido->actualizarPedido($paramatros);
 
         return redirect('/pedidos/'. $pedido->id_pedido)->with('success', 'Producto agregado al pedido!');
     }
