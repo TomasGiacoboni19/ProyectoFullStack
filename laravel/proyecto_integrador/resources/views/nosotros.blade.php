@@ -42,7 +42,7 @@
                 <div class="card">
                     <div class="card-info">
                         <div class="card-avatar"></div>
-                        <div class="card-title">Tomás Giancobini</div>
+                        <div class="card-title">Tomás Giacoboni</div>
                         <div class="card-subtitle">Desarrollo Web</div>
                     </div>
                     <ul class="card-social">
