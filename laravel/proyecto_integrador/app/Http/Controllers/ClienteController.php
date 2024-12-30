@@ -78,7 +78,21 @@ class ClienteController extends Controller
         auth()->logout();
         return response()->redirectTo("/");
     }
+    public function edit(Cliente $cliente) {
+        return view('clientes.editar_cliente', ['cliente' => $cliente, 'carrito' => $this->carrito()]);
+    }
+    public function update(Request $request,Cliente $cliente) {
+        $request->validate([
+            'nombre' => 'string|max:255',
+            'apellido' => 'string|max:255',
+            'email' => 'email|max:255',
+            'usuario' => 'string|max:255',
+        ]);
 
 
+        $cliente->update($request->all());
+
+        return redirect("/clientes/".$cliente->id_cliente)->with('success', 'Perfil actualizado correctamente.');
+    }
 
 }

@@ -55,3 +55,9 @@ Route::get('/historia',[HomeController::class,'historia']);
 Route::get('/categorias',[HomeController::class,'categorias']);
 Route::get('/productos-destacados',[HomeController::class,'productos-destacados']);
 
+//  Mostrar el formulario de edición de cliente
+Route::get('/clientes/{cliente}/editar', [ClienteController::class, 'edit'])->middleware(['auth', EnsureClientIsAuthenticated::class]);
+
+// Actualizar los datos del cliente
+Route::put('/clientes/{cliente}/actualizar', [ClienteController::class, 'update']);
+

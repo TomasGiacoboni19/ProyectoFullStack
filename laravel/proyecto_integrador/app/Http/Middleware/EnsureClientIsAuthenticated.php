@@ -10,7 +10,7 @@ class EnsureClientIsAuthenticated
     {
         $cliente = $request->route('cliente');
         if ($cliente->id_cliente !== auth()->id()) {
-            abort(403, 'No tienes permiso para ver estos productos.');
+            abort(403, 'No tienes permiso.');
         }
 
         return $next($request);
