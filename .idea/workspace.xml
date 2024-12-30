@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f954448-7bb5-4cb8-8389-7e88d45888bb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/producto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/producto.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/productos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/proyecto_integrador/resources/views/productos/productos.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +66,7 @@
       <updated>1735503824135</updated>
       <workItem from="1735503825147" duration="1614000" />
       <workItem from="1735505562758" duration="140000" />
-      <workItem from="1735505810734" duration="14135000" />
+      <workItem from="1735505810734" duration="16501000" />
     </task>
     <servers />
   </component>
