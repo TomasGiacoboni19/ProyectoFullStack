@@ -8,6 +8,7 @@ use App\Models\Localizacion;
 use App\Models\medioDePago;
 use App\Models\Pedido;
 use App\Service\Notificacion\Gmail\Gmail;
+use DateTime;
 use Illuminate\Http\Request;
 use PhpParser\Node\Scalar\MagicConst\Dir;
 
@@ -47,6 +48,8 @@ class PagoController extends Controller
         $pedido->direccion_entrega_id = $direccion->id_direccion;
         $pedido->medio_pago_id = $datos['metodo'];
         $pedido->carritoDisponible = 0;
+        date_default_timezone_set('America/Argentina/Buenos_Aires');
+        $pedido->fecha_pago = date('Y-m-d H:i:s');
         $pedido->save();
 
         $cliente = Cliente::find(auth()->id());

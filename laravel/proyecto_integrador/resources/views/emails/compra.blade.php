@@ -96,7 +96,7 @@
             </tr>
             <tr>
                 <td>{{ $pedido->id_pedido }}</td>
-                <td>{{ \Carbon\Carbon::parse($pedido->fecha_pedido)->format('d/m/Y') }}</td>
+                <td>{{ $pedido->fecha_compra }}</td>
                 <td>{{
                         $pedido->direccion
                         ? ($pedido->direccion->localizacion->nombre ?? 'No especificado')

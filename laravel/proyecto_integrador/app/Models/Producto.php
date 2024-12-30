@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use App\Exceptions\SinStockSuficienteExcepcion;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Producto extends Model
 {
@@ -13,7 +13,7 @@ class Producto extends Model
     protected $primaryKey = 'id_producto'; // Suele escribirse asi la Primary Key
     public $timestamps = false; // Desactivar timestamps
 
-    protected $fillable = ["nombre_producto", "precio_producto","stock_producto",'categoria_id','vendedor_id', 'foto_producto', 'descripcion_producto']; // Hay q definir q podemos guardar
+    protected $fillable = ["nombre_producto", "precio_producto","stock_producto",'categoria_id','vendedor_id', 'foto_producto', 'descripcion_producto', 'esActivo']; // Hay q definir q podemos guardar
 
 
     public function categoria(): BelongsTo {
@@ -32,9 +32,15 @@ class Producto extends Model
 
     public function modificarStock(int $cantidad) {
         if ($this->stock_producto + $cantidad < 0) {
-            throw new Exception('No hay suficiente stock disponible.');
+            throw new SinStockSuficienteExcepcion('No hay suficiente stock disponible.');
         }
         $this->stock_producto += $cantidad;
         $this->save();
     }
+
+    public static function getActivos(){
+        return self::where('estado', 'Disponible')->get();
+    }
+
+
 }

@@ -30,6 +30,7 @@
                 <div class="col-md-6">
                     <p><strong>Cliente:</strong> {{ $pedido->cliente->nombre }} {{ $pedido->cliente->apellido }}</p>
                     <p><strong>Fecha del Pedido:</strong> {{ $pedido->fecha_pedido}}</p>
+
                     <p><strong>Total del Pedido:</strong> ${{ number_format($pedido->precio_total, 2, ',', '.') }}</p>
                 </div>
                 <div class="col-md-6">
@@ -37,6 +38,8 @@
                         <span class="badge bg-success text-white">Completado</span>
                     </p>
                     <p><strong>Forma de Pago:</strong> {{ $pedido->medioDePago->nombre }}</p>
+                    <p><strong>Fecha de Pago:</strong> {{ $pedido->fecha_pago}}</p>
+
                 </div>
             </div>
         </div>

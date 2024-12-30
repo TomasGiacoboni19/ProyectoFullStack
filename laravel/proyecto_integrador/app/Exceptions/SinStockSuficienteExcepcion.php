@@ -1,14 +1,22 @@
 <?php
 
-namespace App\Models;
+namespace App\Exceptions;
 
-class SinStockSuficienteExcepcion
+use Exception;
+
+class SinStockSuficienteExcepcion extends Exception
 {
 
-    /**
-     * @param string $string
-     */
-    public function __construct(string $string)
+    public function __construct($message = "El stock es insuficiente", $code = 400)
     {
+        parent::__construct($message, $code);
     }
+
+    public function render($request)
+    {
+        return redirect()->back()
+            ->withErrors(['usuario' => $this->getMessage()])
+            ->withInput();
+    }
+
 }

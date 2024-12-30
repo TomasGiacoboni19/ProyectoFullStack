@@ -12,7 +12,7 @@ class Pedido extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'cliente_id', 'fecha_pedido','precio_total','carritoDisponible','medio_pago_id','entregado', 'direccion_entrega_id'
+        'cliente_id', 'fecha_pedido','precio_total','carritoDisponible','medio_pago_id','entregado', 'direccion_entrega_id','fecha_pago'
     ];
 
 

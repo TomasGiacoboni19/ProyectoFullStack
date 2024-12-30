@@ -30,7 +30,9 @@
         <p><strong>Cliente:</strong> {{ $pedido->cliente->nombre }} {{ $pedido->cliente->apellido }}</p>
         <p><strong>Total de productos:</strong> {{ $pedido->item->count() }}</p>
         <p><strong>Fecha del pedido: </strong> {{ $pedido->fecha_pedido }}</p>
-        
+        @if($pedido->fecha_pago != null)
+            <p><strong>Fecha del pago: </strong> {{ $pedido->fecha_pago }}</p>
+        @endif
         <h3>Productos en el Pedido</h3>
         <hr>
         @foreach($pedido->item as $unItem)
@@ -80,7 +82,7 @@
                 </svg>
             </div>
         </div>
-        </a>       
+        </a>
         @elseif(!$pedido->entregado)
             <p class="section-title">Estado Actual</p>
             <p>Sin entregar</p>

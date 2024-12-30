@@ -15,7 +15,7 @@ class ProductoController extends Controller
 
     public function index()
     {
-        $paramatros = ['productos' => Producto::all(), 'carrito' => $this->carrito()];
+        $paramatros = ['productos' => Producto::getActivos(), 'carrito' => $this->carrito()];
 
         return view('productos.productos', $paramatros); //Le mando todos los productos
     }
@@ -42,7 +42,7 @@ class ProductoController extends Controller
             "precio_producto.required" => "¡Precio del producto es obligatorio!",
             "categoria.required" => "¡Categoría del producto es obligatorio!",
             "foto.required" => "¡Foto del producto es obligatorio!",
-            "descripcion_producto.required" => "¡Descripción del producto es obligatoria!" 
+            "descripcion_producto.required" => "¡Descripción del producto es obligatoria!"
         ]);
 
         // Primero tengo que guardar la imagen
@@ -104,12 +104,10 @@ class ProductoController extends Controller
 
     public function destroy(Producto $producto)
     {
-        try {
-            $producto->delete();
-            return redirect()->back()->with('success', 'Se elimino correctamente.');
-        } catch (Exception $e) {
-            return redirect()->back()->with('failed', $e->getMessage());
-        }
+        $producto->estado = "No Disponible";
+        $producto->save();
+        return redirect()->back()->with('success', 'Producto eliminado!');
+
     }
 
     public function json($id) {
