@@ -98,11 +98,11 @@
             </button>
         </a>
     </div>
-
+@if($productos->count()>0)
 <section id="test" class="wow animate__fadeInDown" data-wow-duration="2s" data-wow-delay ="1.5s">
     @include('/productos/formularioEditarProducto')
 </section>
-
+@endif
 @include('footer')
 <script src={{asset("js/tablaProducto.js")}}></script>
 <script src={{asset("js/tablaProducto2.js")}}></script>
