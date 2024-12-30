@@ -15,15 +15,14 @@
             <!-- Nombre del Producto -->
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-8">
                         <label for="nombre_producto">Nombre del Producto:</label>
                         <input
                             type="text"
                             id="nombre_producto"
                             name="nombre_producto"
                             value="{{ old('nombre_producto', $producto->nombre_producto) }}"
-                            autocomplete="off"
-                            required>
+                            autocomplete="off">
 
                         <!-- Precio -->
                         <label for="precio_producto">Precio:</label>
@@ -33,8 +32,7 @@
                             name="precio_producto"
                             value="{{ old('precio_producto', $producto->precio_producto) }}"
                             step="0.01"
-                            min="0"
-                            required>
+                            min="0">
 
                         <!-- Stock -->
                         <label for="stock_producto">Nuevo stock:</label>
@@ -43,8 +41,7 @@
                             id="stock_producto"
                             name="stock_producto"
                             value="{{ old('stock_producto', 1 ) }}"
-                            min="0"
-                            required>
+                            min="0">
                         
                         <!-- Descripcion -->
                         <label for="descripcion_producto">Descripcion:</label>
@@ -53,14 +50,16 @@
                                 id="descripcion_producto"
                                 name="descripcion_producto"
                                 value="{{ old('descripcion_producto', $producto->descripcion_producto) }}"
-                                min="0"
-                                required>
+                                min="0">
+                    </div>
+                    <div class="col-4">
+                        <img id="imagenDelProducto" src="" alt="">                                          
                     </div>
                 </div>
             </div>
-
-            <!-- Botón Actualizar -->
-            <button type="submit" class="btn btn-primary" id="form_agregar">Actualizar</button>
+            <div class="contenedorActualizar">
+                <button type="submit" class="btn btn-primary" id="form_agregar">Actualizar</button>
+            </div>
         </form>
     </div>
 </section>

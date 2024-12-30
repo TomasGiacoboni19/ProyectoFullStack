@@ -15,13 +15,20 @@ function mostrarFormularioEdicion(productoId) {
         url: `/productos/${productoId}/json`, // Endpoint con el ID correcto
         type: 'GET',
         success: function (data) {
-            console.log('Datos del producto:', data); // Debug para ver qué datos se reciben
             // Rellena los campos del formulario
             $('#formularioEditar').attr('action', `/productos/${productoId}`);
             $('#nombre_producto').val(data.nombre_producto);
             $('#precio_producto').val(data.precio_producto);
             $('#stock_producto').val(data.stock_producto);
             $('#descripcion_producto').val(data.descripcion_producto);
+
+            // Obtener la fila de la tabla en la que se hizo clic
+            var fila = $("#myTable tr[data-id='" + productoId + "']")
+            
+            var imagenUrl = fila.find('td img').attr('src');
+
+            $('#imagenDelProducto').attr('src', imagenUrl);
+
             $('#editFormContainer').show(); // Muestra el formulario
         },
         error: function () {    
@@ -53,7 +60,6 @@ $("#formularioEditar").submit((event) => {
         },
         success: function(response) {
             $('#editFormContainer').hide(); // Esconde el formulario
-            console.log(response);
 
             var precioFormateado = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(response.precio_producto);
 

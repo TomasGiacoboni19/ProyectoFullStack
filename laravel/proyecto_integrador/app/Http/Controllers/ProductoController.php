@@ -15,7 +15,7 @@ class ProductoController extends Controller
 
     public function index()
     {
-        $paramatros = ['productos' => Producto::getActivos(), 'carrito' => $this->carrito()];
+        $paramatros = ['productos' => Producto::all(), 'carrito' => $this->carrito()];
 
         return view('productos.productos', $paramatros); //Le mando todos los productos
     }
@@ -42,7 +42,7 @@ class ProductoController extends Controller
             "precio_producto.required" => "¡Precio del producto es obligatorio!",
             "categoria.required" => "¡Categoría del producto es obligatorio!",
             "foto.required" => "¡Foto del producto es obligatorio!",
-            "descripcion_producto.required" => "¡Descripción del producto es obligatoria!"
+            "descripcion_producto.required" => "¡Descripción del producto es obligatoria!" 
         ]);
 
         // Primero tengo que guardar la imagen
@@ -75,21 +75,27 @@ class ProductoController extends Controller
     public function update(Request $request, Producto $producto)
     {
         $datos = $request->validate([
-            "nombre_producto" => ["required"],
-            "precio_producto" => ["required"],
-            "stock" => ["required"],
-            "descripcion_producto" => ["required"]
-        ], [
-            "nombre_producto.required" => "Este campo es obligatorio!",
-            "precio_producto.required" => "Este campo es obligatorio!",
-            "stock.required" => "Este campo es obligatorio!",
-            "descripcion_producto.required" => "Este campo es obligatorio!",
+            "nombre_producto" => ["nullable", "string"],
+            "precio_producto" => ["nullable", "numeric"],
+            "stock" => ["nullable", "integer"],
+            "descripcion_producto" => ["nullable", "string"]
         ]);
 
-        $producto->nombre_producto = $datos["nombre_producto"];
-        $producto->precio_producto = $datos["precio_producto"];
-        $producto->stock_producto = $datos["stock"];
-        $producto->descripcion_producto = $datos["descripcion_producto"];
+        if (isset($datos["nombre_producto"])) {
+            $producto->nombre_producto = $datos["nombre_producto"];
+        }
+    
+        if (isset($datos["precio_producto"])) {
+            $producto->precio_producto = $datos["precio_producto"];
+        }
+    
+        if (isset($datos["stock"])) {
+            $producto->stock_producto = $datos["stock"];
+        }
+    
+        if (isset($datos["descripcion_producto"])) {
+            $producto->descripcion_producto = $datos["descripcion_producto"];
+        }
 
         $producto->save();
 
@@ -104,10 +110,12 @@ class ProductoController extends Controller
 
     public function destroy(Producto $producto)
     {
-        $producto->estado = "No Disponible";
-        $producto->save();
-        return redirect()->back()->with('success', 'Producto eliminado!');
-
+        try {
+            $producto->delete();
+            return redirect()->back()->with('success', 'Se elimino correctamente.');
+        } catch (Exception $e) {
+            return redirect()->back()->with('failed', $e->getMessage());
+        }
     }
 
     public function json($id) {

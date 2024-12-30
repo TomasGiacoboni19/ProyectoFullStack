@@ -12,6 +12,39 @@
     height: 30px;
 }
 
+#imagenDelProducto {
+    width: 160px;
+}
+
+.contenedorActualizar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="file"] {
+    display: none; /* Oculta el botón predeterminado */
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+.custom-file-upload:hover {
+    background-color: #333;
+}
+
+#file-name {
+    margin-left: 10px;
+    font-style: italic;
+}
+
 .botonCerrar {
     position: relative;
     width: 30px;
