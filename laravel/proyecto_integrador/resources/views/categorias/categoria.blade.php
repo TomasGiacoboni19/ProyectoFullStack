@@ -23,7 +23,7 @@
     </div>
     <div class="row">
         @foreach($categoria->productos as $producto)
-        <div class="col-3 d-flex justify-content-center mt-5">
+        <div class="col-lg-3 col-xl-3 col-md-3 col-sm-4  d-flex justify-content-center mt-5">
             <div class="carta ">
                 <div class="carta-img"><div class="img"></div> <img src="{{asset('storage/'.$producto->foto_producto)}}" alt=""></div>
                 <div class="carta-title">{{$producto->nombre_producto}}</div>

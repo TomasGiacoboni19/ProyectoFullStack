@@ -17,63 +17,32 @@
 ## Empresa 
 Dolce Banana🍌 es una marca que diseña y comercializa ropa desde el año 2010, iniciando su camino en un pequeño local ubicado en el barrio de Recoleta, Ciudad de Buenos Aires. Gracias al esfuerzo y la dedicación, en 2018 logramos abrir talleres propios en Lomas de Zamora, Provincia de Buenos Aires. Esto nos permitió abastecer puntos de venta en todo el país y expandir nuestra visión de estilo, comodidad y sostenibilidad.
 
-## Descripción del Proyecto
-El ecommerce de **Dolce Banana**🍌 se diseñó para ofrecer una experiencia de compra fluida e intuitiva, enfocándose en la usabilidad y el diseño responsive. Además, se buscó implementar un sistema robusto que permita la gestión de productos, usuarios y pedidos desde un panel de administración.
+Nuestro taller de 800 m² está diseñado para optimizar cada etapa del proceso productivo, distribuyéndose en:
+Planta Baja: Recepción de telas y materiales, y área de corte.
+Planta Intermedia: Oficinas administrativas y diseño.
+Planta Alta: Talleres de confección.
+Este espacio cumple con estrictas normas de seguridad y sostenibilidad, asegurando la máxima calidad en nuestras prendas.
 
-El desarrollo fue realizado en equipo, compuesto por:  
-- **Lucas Iturrioz**  
-- **Bruno Rodríguez**  
-- **Mauricio López**  
-- **Tomás Giacoboni**
+Nuestra Filosofía
+En Dolce Banana🍌 trabajamos bajo los pilares de:
+Diseño de Moda👔: Prendas únicas que reflejan creatividad y estilo.
+Calidad🔝: Altos estándares en confección y materiales.
 
-Cada integrante aportó su creatividad y conocimientos para lograr una plataforma integral y funcional.
+El Proyecto
+Nuestro ecommerce busca reflejar los valores y la identidad de Dolce Banana, facilitando la experiencia del cliente desde cualquier parte del país. Este sitio fue desarrollado por los integrantes Lucas Iturrioz, Bruno Rodríguez, Mauricio López y Tomás Giacoboni, quienes aportaron sus conocimientos y creatividad para lograr una plataforma moderna, intuitiva y funcional.
 
----
+Características del Ecommerce:
+Catálogo Interactivo: Exploración fácil de nuestras líneas de indumentaria.
+Carrito de Compras Optimizado: Flujo de compra rápido y seguro.
+Blog de Moda: Consejos y tendencias alineadas con nuestra filosofía.
 
-## Tecnologías Utilizadas
+Tecnologías Utilizadas:
+Frontend: HTML5, CSS, JavaScript
+Frameworks: Blade de Laravel 
+Backend: PHP 
+Base de Datos: MySQL 
 
-El proyecto integra múltiples tecnologías y herramientas aprendidas durante el curso:  
-
-### **Frontend**
-- **HTML5** y **CSS3**: Estructuración y estilos base.  
-- **JavaScript**: Interactividad y funcionalidad dinámica (e.g., edición de productos y cálculo en tiempo real).  
-- **Bootstrap**: Estilos responsivos y componentes reutilizables.  
-
-### **Backend**
-- **PHP**: Desarrollo del servidor y lógica de negocio.  
-- **Laravel**: Framework utilizado para implementar la arquitectura MVC, la gestión de rutas y las plantillas con Blade.  
-
-### **Base de Datos**
-- **MySQL**: Sistema para almacenar y gestionar datos como productos, usuarios y pedidos.  
-
-### **Herramientas Adicionales**
-- **XAMPP**: Servidor local para pruebas y desarrollo.  
-- **Composer**: Gestión de dependencias para PHP.  
-- **AJAX**: Comunicación asincrónica entre cliente y servidor para una experiencia sin recargas.  
-
----
-
-## Funcionalidades Implementadas
-
-### **Sección Pública**  
-- **Home**: Página principal con diseño atractivo y accesible.   
-- **Carrito de Compras**: Flujo de compra interactivo y optimizado.  
-- **Formularios Dinámicos**: Edición de productos directamente desde la interfaz del catálogo.  
-
-### **Panel Administrativo**
-- **Gestión de Productos**: Alta, baja, modificación y consulta de productos.  
-- **Gestión de Pedidos**: Seguimiento de pedidos realizados por los clientes.  
-
-### **Características Destacadas**
-- **Responsive Design**: Totalmente adaptable a dispositivos móviles.  
-- **Carga Dinámica**: Implementación de funcionalidades como el cálculo automático de totales y edición en tiempo real.  
-- **Validaciones de Datos**: Validaciones tanto en el cliente como en el servidor para garantizar integridad.  
-
----
-
-## Objetivo Académico
-
-El principal objetivo del proyecto fue consolidar los conocimientos adquiridos durante el curso mediante el desarrollo de una aplicación completa que abarcara todos los aspectos del desarrollo web, incluyendo diseño frontend, desarrollo backend, integración de bases de datos y manejo de frameworks.
-
+Impacto Esperado
+Con este ecommerce, buscamos potenciar la presencia de Dolce Banana🍌 en el mercado digital, acercándonos a nuestros clientes de manera cómoda, directa y sostenible. Además, esperamos fomentar nuestra filosofía de moda responsable, inspirando a más personas a elegir marcas que prioricen la calidad y el cuidado del medio ambiente.
 
 ¡Gracias por acompañarnos en este viaje!✨
