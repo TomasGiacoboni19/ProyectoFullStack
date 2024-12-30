@@ -1,10 +1,10 @@
-
 .carta {
     --font-color: #323232;
     --font-color-sub: #666;
     --bg-color: #fff;
     --main-color: #323232;
     --main-focus: #2d8cf0;
+    margin-top: 20px;
     width: 100%;
     height: 100%;
     background: var(--bg-color);
@@ -38,9 +38,8 @@
 
 }
 
-
 .carta-title {
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 700;
     text-align: center;
     color: var(--font-color);
@@ -141,5 +140,23 @@
     text-align: center;
 }
 .Selector{
-    margin-top: 50pxpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.opciones1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opciones2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#total {
+    display: flex;
+    gap: 20px;
 }
