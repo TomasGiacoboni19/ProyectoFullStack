@@ -20,7 +20,7 @@
 </div>
 <div class="row">
     @foreach($productos as $producto)
-        <div class="col d-flex justify-content-center mt-5">
+        <div class="col-3 d-flex justify-content-center mt-5">
             <section class="wow animate__rotateIn " data-wow-duration="2s" data-wow-delay ="1.5s">
             <div class="carta ">
                 <div class="carta-img"><div class="img"></div> <img src="{{asset('storage/'.$producto->foto_producto)}}" alt=""></div>

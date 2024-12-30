@@ -20,7 +20,7 @@
     </div>
     <div class="row">
         @foreach($categoria->productos as $producto)
-        <div class="col d-flex justify-content-center mt-5">
+        <div class="col-3 d-flex justify-content-center mt-5">
             <div class="carta ">
                 <div class="carta-img"><div class="img"></div> <img src="{{asset('storage/'.$producto->foto_producto)}}" alt=""></div>
                 <div class="carta-title">{{$producto->nombre_producto}}</div>
