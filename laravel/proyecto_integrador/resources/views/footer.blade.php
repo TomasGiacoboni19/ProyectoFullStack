@@ -15,7 +15,7 @@
             <div class="col-md-4 mb-4">
                 <h3 class="text-uppercase">Interes</h3>
                 <ul class="list-unstyled">
-                    <li><a href="{{ url('/perfil') }}" class="text-white">Mi cuenta</a></li>
+                    <li><a href="/clientes/{{auth()->user()->id_cliente}}" class="text-white">Mi cuenta</a></li>
                     <li><a href="{{ url('/productos') }}" class="text-white">Productos</a></li>
                     @if(!empty(auth()->user()->id_cliente))
                         <li><a href="/clientes/{{auth()->user()->id_cliente}}/pedidos" class="text-white">Pedidos</a></li>

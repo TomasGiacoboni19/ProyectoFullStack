@@ -9,6 +9,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/header.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{asset('css/categoria.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>  <!--Efectos WOW -->
 
     <title>Productos</title>
@@ -16,7 +19,7 @@
 @include('header',['carrito'=>$carrito])
 <body>
 <div class="tituloCategorias">
-    <span>Productos</span>
+    <span class="nunito-title">Productos</span>
 </div>
 <div class="row">
     @foreach($productos as $producto)
