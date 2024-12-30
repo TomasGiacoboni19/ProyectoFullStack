@@ -50,6 +50,7 @@ class ProductoController extends Controller
         $pathFoto = $request->file('foto_producto')->store('fotos', 'public');
 
         $datos['foto_producto'] = $pathFoto;
+        $datos['estado'] = 'Disponible';
 
         Producto::create($datos);
 

@@ -13,7 +13,7 @@ class Producto extends Model
     protected $primaryKey = 'id_producto'; // Suele escribirse asi la Primary Key
     public $timestamps = false; // Desactivar timestamps
 
-    protected $fillable = ["nombre_producto", "precio_producto","stock_producto",'categoria_id','vendedor_id', 'foto_producto', 'descripcion_producto', 'esActivo']; // Hay q definir q podemos guardar
+    protected $fillable = ["nombre_producto", "precio_producto","stock_producto",'categoria_id','vendedor_id', 'foto_producto', 'descripcion_producto', 'esActivo','estado']; // Hay q definir q podemos guardar
 
 
     public function categoria(): BelongsTo {
